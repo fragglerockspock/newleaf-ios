@@ -1,0 +1,47 @@
+name: Verify iOS build prerequisites
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/verify-ios-build.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Check out source, submodules, and Git LFS assets
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
+          fetch-depth: 1
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          git lfs version
+
+      - name: Verify Git LFS objects
+        run: |
+          git lfs ls-files
+          git lfs fsck
+
+      - name: Verify submodules
+        run: |
+          git submodule status --recursive
+          if git submodule status --recursive | grep -E '^[-+U]'; then
+            echo "One or more submodules are not at their recorded commits."
+            exit 1
+          fi
+
+      - name: Inspect Xcode project
+        run: |
+          xcodebuild -list -project ManicEmu/ManicEmu.xcodeproj
