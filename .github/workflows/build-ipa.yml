@@ -31,7 +31,7 @@ jobs:
       - name: Resolve packages and correct Device package platform
         run: |
           set -euo pipefail
-          xcodebuild -resolvePackageDependencies -project ManicEmu/ManicEmu.xcodeproj -scheme ManicEmuSideload
+          xcodebuild -resolvePackageDependencies -project ManicEmu/ManicEmu.xcodeproj -scheme ManicEmuSideload -derivedDataPath "$RUNNER_TEMP/DerivedData"
           DEVICE_PACKAGE="$RUNNER_TEMP/DerivedData/SourcePackages/checkouts/Device/Package.swift"
           if [ ! -f "$DEVICE_PACKAGE" ]; then
             DEVICE_PACKAGE="$(find "$HOME/Library/Developer/Xcode/DerivedData" "$RUNNER_TEMP/DerivedData" -path '*/checkouts/Device/Package.swift' -print -quit 2>/dev/null || true)"
