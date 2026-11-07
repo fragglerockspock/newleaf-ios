@@ -38,7 +38,9 @@ jobs:
           fi
           test -n "$DEVICE_PACKAGE"
           test -f "$DEVICE_PACKAGE"
+          sed -i '' '1s/5.0/5.1/' "$DEVICE_PACKAGE"
           sed -i '' 's/\.iOS(\.v9)/.iOS(.v13)/' "$DEVICE_PACKAGE"
+          head -n 1 "$DEVICE_PACKAGE" | grep -F 'swift-tools-version:5.1'
           grep -F '.iOS(.v13)' "$DEVICE_PACKAGE"
 
       - name: Archive sideload configuration
