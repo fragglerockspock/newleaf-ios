@@ -24,8 +24,8 @@ jobs:
           set -euo pipefail
           git lfs version
           git remote add upstream https://github.com/Manic-EMU/ManicEMU.git
-          git fetch upstream main
-          git lfs fetch upstream main
+          git fetch upstream main:refs/remotes/upstream/main
+          git lfs fetch upstream refs/remotes/upstream/main
 
       - name: Verify required LFS objects are present
         shell: bash
@@ -33,9 +33,10 @@ jobs:
           set -euo pipefail
           git lfs ls-files
           git lfs fsck --objects HEAD
+          git lfs fsck --objects refs/remotes/upstream/main
 
-      - name: Upload the private repository's required LFS objects
+      - name: Upload all reachable LFS objects to the private repository
         shell: bash
         run: |
           set -euo pipefail
-          git lfs push origin HEAD
+          git lfs push --all origin
