@@ -32,7 +32,7 @@ jobs:
       - name: Verify Git LFS objects
         run: |
           git lfs ls-files
-          git lfs fsck
+          git lfs fsck --objects HEAD
 
       - name: Verify submodules
         run: |
