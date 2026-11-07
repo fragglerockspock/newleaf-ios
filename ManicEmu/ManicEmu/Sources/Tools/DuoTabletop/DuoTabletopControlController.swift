@@ -7,6 +7,7 @@
 //
 
 import ProHUD
+import CoreMotion
 
 @available(iOS 27.1, *)
 final class DuoTabletopControlController: UIViewController {
