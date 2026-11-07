@@ -2,6 +2,11 @@ name: Repair Git LFS assets
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/repair-lfs.yml"
 
 permissions:
   contents: write
@@ -31,14 +36,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git lfs ls-files
+          git lfs ls-files --long HEAD
           git lfs fsck --objects HEAD
           git lfs fsck --objects refs/remotes/upstream/main
 
-      - name: Upload LFS objects referenced by the current commit
+      - name: Upload only LFS objects referenced by the current commit
         shell: bash
         run: |
           set -euo pipefail
-          git lfs ls-files -l | awk '{print $1}' | sort -u > /tmp/lfs-oids.txt
+          git lfs ls-files --long HEAD | awk '{print $1}' | sort -u > /tmp/lfs-oids.txt
           test -s /tmp/lfs-oids.txt
           git lfs push --object-id origin $(cat /tmp/lfs-oids.txt)
