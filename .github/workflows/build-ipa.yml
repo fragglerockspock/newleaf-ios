@@ -1,0 +1,60 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-ipa.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build-ipa:
+    runs-on: macos-26
+    timeout-minutes: 120
+    steps:
+      - name: Check out source, submodules, and Git LFS assets
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
+          fetch-depth: 1
+
+      - name: Show Xcode version and schemes
+        run: |
+          xcodebuild -version
+          xcodebuild -list -project ManicEmu/ManicEmu.xcodeproj
+
+      - name: Archive sideload configuration
+        run: |
+          xcodebuild archive \
+            -project ManicEmu/ManicEmu.xcodeproj \
+            -scheme ManicEmuSideload \
+            -configuration SideloadRelease \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/ManicEmu.xcarchive" \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO
+
+      - name: Package unsigned IPA
+        run: |
+          set -euo pipefail
+          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          test -d "$APP_PATH"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          ditto "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/ManicEmu.app"
+          cd "$RUNNER_TEMP/ipa"
+          ditto -c -k --sequesterRsrc --keepParent Payload "$GITHUB_WORKSPACE/ManicEmu-unsigned.ipa"
+          test -s "$GITHUB_WORKSPACE/ManicEmu-unsigned.ipa"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ManicEmu-unsigned-IPA
+          path: ManicEmu-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
