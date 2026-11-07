@@ -28,6 +28,19 @@ jobs:
           xcodebuild -version
           xcodebuild -list -project ManicEmu/ManicEmu.xcodeproj
 
+      - name: Resolve packages and correct Device package platform
+        run: |
+          set -euo pipefail
+          xcodebuild -resolvePackageDependencies -project ManicEmu/ManicEmu.xcodeproj -scheme ManicEmuSideload
+          DEVICE_PACKAGE="$RUNNER_TEMP/DerivedData/SourcePackages/checkouts/Device/Package.swift"
+          if [ ! -f "$DEVICE_PACKAGE" ]; then
+            DEVICE_PACKAGE="$(find "$HOME/Library/Developer/Xcode/DerivedData" "$RUNNER_TEMP/DerivedData" -path '*/checkouts/Device/Package.swift' -print -quit 2>/dev/null || true)"
+          fi
+          test -n "$DEVICE_PACKAGE"
+          test -f "$DEVICE_PACKAGE"
+          sed -i '' 's/\.iOS(\.v9)/.iOS(.v13)/' "$DEVICE_PACKAGE"
+          grep -F '.iOS(.v13)' "$DEVICE_PACKAGE"
+
       - name: Archive sideload configuration
         run: |
           xcodebuild archive \
