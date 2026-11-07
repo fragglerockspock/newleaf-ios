@@ -35,6 +35,7 @@ jobs:
             -scheme ManicEmuSideload \
             -configuration SideloadRelease \
             -destination 'generic/platform=iOS' \
+            -skipPackagePluginValidation \
             -archivePath "$RUNNER_TEMP/ManicEmu.xcarchive" \
             -derivedDataPath "$RUNNER_TEMP/DerivedData" \
             CODE_SIGNING_ALLOWED=NO \
