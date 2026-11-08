@@ -116,7 +116,7 @@ jobs:
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ManicEmu-unsigned-IPA
+          name: ManicEmu-ACNL-IPA
           path: ManicEmu-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
