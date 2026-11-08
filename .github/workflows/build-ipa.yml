@@ -43,6 +43,34 @@ jobs:
           head -n 1 "$DEVICE_PACKAGE" | grep -F 'swift-tools-version:5.1'
           grep -F '.iOS(.v13)' "$DEVICE_PACKAGE"
 
+      - name: Check out ACNL Azahar core source
+        uses: actions/checkout@v4
+        with:
+          repository: fragglerockspock/azahar-acnl
+          ref: acnl/single-screen-layout
+          path: azahar-acnl
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Build ACNL Azahar core for iOS ARM64
+        working-directory: azahar-acnl
+        run: |
+          set -euo pipefail
+          cmake -DENABLE_LIBRETRO=ON \
+            -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+            -DCMAKE_C_FLAGS=-DIOS \
+            -DCMAKE_CXX_FLAGS=-DIOS \
+            -DIOS=ON \
+            -DCMAKE_SYSTEM_NAME=iOS \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=14.0 \
+            -DCITRA_USE_PRECOMPILED_HEADERS=OFF \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DENABLE_OPT=OFF \
+            . -B build/ios-arm64
+          cmake --build build/ios-arm64 --target citra_libretro --config Release
+          strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
+          test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
+
       - name: Archive sideload configuration
         run: |
           xcodebuild archive \
@@ -55,6 +83,24 @@ jobs:
             -derivedDataPath "$RUNNER_TEMP/DerivedData" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO
+
+      - name: Integrate ACNL Azahar core into archived app
+        run: |
+          set -euo pipefail
+          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          FRAMEWORK_PATH="$APP_PATH/Frameworks/azahar.libretro.framework"
+          CORE_SOURCE="$GITHUB_WORKSPACE/azahar-acnl/build/ios-arm64/bin/Release/azahar_libretro.dylib"
+          test -d "$FRAMEWORK_PATH"
+          test -f "$FRAMEWORK_PATH/Info.plist"
+          test -s "$CORE_SOURCE"
+          EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$FRAMEWORK_PATH/Info.plist")"
+          test "$EXECUTABLE" = "azahar.libretro"
+          cp "$CORE_SOURCE" "$FRAMEWORK_PATH/$EXECUTABLE"
+          install_name_tool -id '@rpath/azahar.libretro.framework/azahar.libretro' "$FRAMEWORK_PATH/$EXECUTABLE"
+          rm -rf "$FRAMEWORK_PATH/_CodeSignature"
+          file "$FRAMEWORK_PATH/$EXECUTABLE" | grep -F 'arm64'
+          otool -D "$FRAMEWORK_PATH/$EXECUTABLE" | grep -F '@rpath/azahar.libretro.framework/azahar.libretro'
+          test -s "$FRAMEWORK_PATH/$EXECUTABLE"
 
       - name: Package unsigned IPA
         run: |
