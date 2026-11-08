@@ -102,6 +102,21 @@ jobs:
           otool -D "$FRAMEWORK_PATH/$EXECUTABLE" | grep -F '@rpath/azahar.libretro.framework/azahar.libretro'
           test -s "$FRAMEWORK_PATH/$EXECUTABLE"
 
+      - name: Trim package to the ACNL core and 3DS skins
+        run: |
+          set -euo pipefail
+          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          CORES_PATH="$APP_PATH/Cores"
+          SYSTEM_PATH="$APP_PATH/System.core"
+          if [ -d "$CORES_PATH" ]; then
+            find "$CORES_PATH" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' ! -name 'azahar.libretro.framework' -exec rm -rf {} +
+          fi
+          if [ -d "$SYSTEM_PATH" ]; then
+            find "$SYSTEM_PATH" -maxdepth 1 -type f \( -name '*.manicskin' -o -name '*.skininfo' \) ! -name '3DS.manicskin' ! -name '3DS_FLEX.manicskin' ! -name '3DS.skininfo' -delete
+          fi
+          test -d "$CORES_PATH/azahar.libretro.framework"
+          find "$CORES_PATH" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' -print
+
       - name: Package unsigned IPA
         run: |
           set -euo pipefail
