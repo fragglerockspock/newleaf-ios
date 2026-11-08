@@ -1,4 +1,4 @@
-name: Build iOS IPA (camera signature diagnostic)
+name: Build iOS IPA (ACNL aspect ratio selector)
 
 on:
   workflow_dispatch:
