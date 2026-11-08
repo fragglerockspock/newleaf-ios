@@ -1,4 +1,4 @@
-name: Build iOS IPA (Leaf camera patch)
+name: Build iOS IPA (camera signature diagnostic)
 
 on:
   workflow_dispatch:
