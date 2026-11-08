@@ -1,4 +1,4 @@
-name: Build iOS IPA (ACNL aspect ratio selector)
+name: Build iOS IPA (ACNL aspect selector compile fix)
 
 on:
   workflow_dispatch:
