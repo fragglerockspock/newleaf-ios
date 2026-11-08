@@ -14,7 +14,7 @@ permissions:
 jobs:
   build-ipa:
     runs-on: xcode-27
-    timeout-minutes: 150
+    timeout-minutes: 151
     steps:
       - name: Check out source, submodules, and Git LFS assets
         uses: actions/checkout@v4
