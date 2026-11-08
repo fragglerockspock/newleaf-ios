@@ -106,16 +106,20 @@ jobs:
         run: |
           set -euo pipefail
           APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          FRAMEWORKS_PATH="$APP_PATH/Frameworks"
           CORES_PATH="$APP_PATH/Cores"
           SYSTEM_PATH="$APP_PATH/System.core"
-          if [ -d "$CORES_PATH" ]; then
-            find "$CORES_PATH" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' ! -name 'azahar.libretro.framework' -exec rm -rf {} +
-          fi
+          test -s "$FRAMEWORKS_PATH/azahar.libretro.framework/azahar.libretro"
+          for CORE_DIRECTORY in "$FRAMEWORKS_PATH" "$CORES_PATH"; do
+            if [ -d "$CORE_DIRECTORY" ]; then
+              find "$CORE_DIRECTORY" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' ! -name 'azahar.libretro.framework' -exec rm -rf {} +
+            fi
+          done
           if [ -d "$SYSTEM_PATH" ]; then
             find "$SYSTEM_PATH" -maxdepth 1 -type f \( -name '*.manicskin' -o -name '*.skininfo' \) ! -name '3DS.manicskin' ! -name '3DS_FLEX.manicskin' ! -name '3DS.skininfo' -delete
           fi
-          test -d "$CORES_PATH/azahar.libretro.framework"
-          find "$CORES_PATH" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' -print
+          test -s "$FRAMEWORKS_PATH/azahar.libretro.framework/azahar.libretro"
+          find "$FRAMEWORKS_PATH" -mindepth 1 -maxdepth 1 -type d -name '*.libretro.framework' -print
 
       - name: Package unsigned IPA
         run: |
