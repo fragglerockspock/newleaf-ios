@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: acnl/single-screen-layout
+          ref: acnl/iphone17pm-widescreen
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
