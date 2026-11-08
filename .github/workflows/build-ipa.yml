@@ -23,12 +23,32 @@ jobs:
           lfs: true
           fetch-depth: 1
 
+      - name: Restore cached Manic app
+        id: manic-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/BaseManicApp
+          key: manic-sideload-base-v1-${{ hashFiles('ManicEmu/**', '**/Package.resolved') }}
+
+      - name: Install C++ compiler cache
+        run: brew install ccache
+
+      - name: Restore Azahar compiler cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/azahar-ccache
+          key: azahar-ios-ccache-v1-${{ github.run_id }}
+          restore-keys: |
+            azahar-ios-ccache-v1-
+
       - name: Show Xcode version and schemes
+        if: steps.manic-cache.outputs.cache-hit != 'true'
         run: |
           xcodebuild -version
           xcodebuild -list -project ManicEmu/ManicEmu.xcodeproj
 
       - name: Resolve packages and correct Device package platform
+        if: steps.manic-cache.outputs.cache-hit != 'true'
         run: |
           set -euo pipefail
           xcodebuild -resolvePackageDependencies -project ManicEmu/ManicEmu.xcodeproj -scheme ManicEmuSideload -derivedDataPath "$RUNNER_TEMP/DerivedData"
@@ -54,9 +74,15 @@ jobs:
 
       - name: Build ACNL Azahar core for iOS ARM64
         working-directory: azahar-acnl
+        env:
+          CCACHE_DIR: ${{ runner.temp }}/azahar-ccache
+          CCACHE_MAXSIZE: 2G
+          CCACHE_COMPILERCHECK: content
         run: |
           set -euo pipefail
-          cmake -DENABLE_LIBRETRO=ON \
+          cmake -DCMAKE_C_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DENABLE_LIBRETRO=ON \
             -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
             -DCMAKE_C_FLAGS=-DIOS \
             -DCMAKE_CXX_FLAGS=-DIOS \
@@ -67,11 +93,13 @@ jobs:
             -DCMAKE_OSX_ARCHITECTURES=arm64 \
             -DENABLE_OPT=OFF \
             . -B build/ios-arm64
-          cmake --build build/ios-arm64 --target citra_libretro --config Release
+          cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
+          ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
+        if: steps.manic-cache.outputs.cache-hit != 'true'
         run: |
           xcodebuild archive \
             -project ManicEmu/ManicEmu.xcodeproj \
@@ -84,10 +112,29 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO
 
+      - name: Preserve unmodified Manic app
+        if: steps.manic-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/BaseManicApp"
+          ditto "$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app" "$RUNNER_TEMP/BaseManicApp/ManicEmuSideload.app"
+
+      - name: Cache unmodified Manic app
+        if: steps.manic-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/BaseManicApp
+          key: manic-sideload-base-v1-${{ hashFiles('ManicEmu/**', '**/Package.resolved') }}
+
+      - name: Save Azahar compiler cache
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/azahar-ccache
+          key: azahar-ios-ccache-v1-${{ github.run_id }}
+
       - name: Integrate ACNL Azahar core into archived app
         run: |
           set -euo pipefail
-          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          APP_PATH="$RUNNER_TEMP/BaseManicApp/ManicEmuSideload.app"
           FRAMEWORK_PATH="$APP_PATH/Frameworks/azahar.libretro.framework"
           CORE_SOURCE="$GITHUB_WORKSPACE/azahar-acnl/build/ios-arm64/bin/Release/azahar_libretro.dylib"
           test -d "$FRAMEWORK_PATH"
@@ -105,7 +152,7 @@ jobs:
       - name: Trim package to the ACNL core and 3DS skins
         run: |
           set -euo pipefail
-          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          APP_PATH="$RUNNER_TEMP/BaseManicApp/ManicEmuSideload.app"
           FRAMEWORKS_PATH="$APP_PATH/Frameworks"
           CORES_PATH="$APP_PATH/Cores"
           SYSTEM_PATH="$APP_PATH/System.core"
@@ -124,7 +171,7 @@ jobs:
       - name: Package unsigned IPA
         run: |
           set -euo pipefail
-          APP_PATH="$RUNNER_TEMP/ManicEmu.xcarchive/Products/Applications/ManicEmuSideload.app"
+          APP_PATH="$RUNNER_TEMP/BaseManicApp/ManicEmuSideload.app"
           test -d "$APP_PATH"
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
           ditto "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/ManicEmu.app"
