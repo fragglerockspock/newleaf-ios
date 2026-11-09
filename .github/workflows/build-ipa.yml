@@ -28,7 +28,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-base-v1-${{ hashFiles('ManicEmu/**', '**/Package.resolved') }}
+          key: manic-sideload-base-v2
+          restore-keys: |
+            manic-sideload-base-v1-
 
       - name: Install C++ compiler cache
         run: brew install ccache
@@ -123,7 +125,9 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-base-v1-${{ hashFiles('ManicEmu/**', '**/Package.resolved') }}
+          key: manic-sideload-base-v2
+          restore-keys: |
+            manic-sideload-base-v1-
 
       - name: Save Azahar compiler cache
         uses: actions/cache/save@v4
