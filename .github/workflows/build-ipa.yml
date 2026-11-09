@@ -1,4 +1,4 @@
-name: Build iOS IPA (ACNL runtime UI layouts)
+name: Build iOS IPA (ACNL controller touchscreen prototype)
 
 on:
   workflow_dispatch:
