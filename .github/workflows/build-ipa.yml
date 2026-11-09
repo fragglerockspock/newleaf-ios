@@ -1,4 +1,4 @@
-name: Build iOS IPA (ACNL UI scale experiment)
+name: Build iOS IPA (ACNL runtime UI layouts)
 
 on:
   workflow_dispatch:
