@@ -1,4 +1,4 @@
-name: Build iOS IPA (Leaf native ToolRing)
+name: Build iOS IPA (ToolRing software-frame fix)
 
 on:
   workflow_dispatch:
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 04f1c11ba682b4863caad941e520f45720c9db97
+          ref: bad199df86231959e4921e8e61c0949278dfec19
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -82,6 +82,7 @@ jobs:
           CCACHE_COMPILERCHECK: content
         run: |
           set -euo pipefail
+          python3 tools/test_leaf_tool_ring.py
           cmake -DCMAKE_C_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DENABLE_LIBRETRO=ON \
