@@ -1,4 +1,4 @@
-name: Build iOS IPA (ToolRing icon fix)
+name: Build iOS IPA (Leaf bottom UI scenes)
 
 on:
   workflow_dispatch:
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 180614eaa6db300b6fe2f3707ee25ad9046b546b
+          ref: f5e1869d00db72065a0d455283ac92c9f090fb11
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -83,6 +83,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 tools/test_leaf_tool_ring.py
+          python3 tools/test_leaf_ui.py
           cmake -DCMAKE_C_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DENABLE_LIBRETRO=ON \
@@ -99,7 +100,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
