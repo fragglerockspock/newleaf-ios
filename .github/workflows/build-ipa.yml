@@ -1,4 +1,4 @@
-name: Build iOS IPA (ToolRing iOS renderer fix)
+name: Build iOS IPA (ToolRing icon fix)
 
 on:
   workflow_dispatch:
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 5ae6d8c466193c4404dcd5bfca36be6fe2ef5e68
+          ref: 180614eaa6db300b6fe2f3707ee25ad9046b546b
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -99,7 +99,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
