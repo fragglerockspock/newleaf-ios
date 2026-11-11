@@ -1,4 +1,4 @@
-name: Build iOS IPA (Leaf UI masks and frame stability)
+name: Build iOS IPA (Leaf UI boot recovery)
 
 on:
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
             manic-sideload-base-v1-
 
       - name: Install C++ compiler cache
-        run: brew install ccache glslang
+        run: brew install ccache glslang spirv-cross
 
       - name: Restore Azahar compiler cache
         uses: actions/cache/restore@v4
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: ab36f406f0d449700aba23c1a22fd79122eb9810
+          ref: 55f3547240606db3e41a56f8169dbcc7a52f7d4b
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -84,9 +84,16 @@ jobs:
           set -euo pipefail
           python3 tools/test_leaf_tool_ring.py
           python3 tools/test_leaf_ui.py
-          python3 tools/test_leaf_ui_archive.py
+          ASAN_OPTIONS=detect_leaks=0 LEAF_SANITIZE=1 python3 tools/test_leaf_ui_archive.py
           glslangValidator -V src/video_core/host_shaders/vulkan_leaf_ui.frag -o "$RUNNER_TEMP/leaf-ui.spv"
-          glslangValidator -V -DARRAY_DYNAMIC_INDEX=1 src/video_core/host_shaders/vulkan_leaf_ui.frag -o "$RUNNER_TEMP/leaf-ui-indexed.spv"
+          glslangValidator -V src/video_core/host_shaders/vulkan_present.vert -o "$RUNNER_TEMP/leaf-vertex.spv"
+          spirv-cross "$RUNNER_TEMP/leaf-ui.spv" --msl --msl-ios --msl-version 20100 --output "$RUNNER_TEMP/leaf-ui.metal"
+          spirv-cross "$RUNNER_TEMP/leaf-vertex.spv" --msl --msl-ios --msl-version 20100 --output "$RUNNER_TEMP/leaf-vertex.metal"
+          if ! xcrun --sdk iphoneos metal --version; then
+            xcodebuild -downloadComponent MetalToolchain
+          fi
+          xcrun --sdk iphoneos metal -std=ios-metal2.1 -c "$RUNNER_TEMP/leaf-ui.metal" -o "$RUNNER_TEMP/leaf-ui.air"
+          swift tools/test_leaf_metal.swift "$RUNNER_TEMP/leaf-vertex.metal" "$RUNNER_TEMP/leaf-ui.metal"
           cmake -DCMAKE_C_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DENABLE_LIBRETRO=ON \
@@ -103,7 +110,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"UI FIX 3 REG ", b"LeafKeyTexel", b"Leaf UI patch:")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"UI FIX 4 REG ", b"LeafKeyTexel", b"Leaf UI patch:")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
