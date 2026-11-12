@@ -1,4 +1,4 @@
-name: Build iOS IPA (Fix2 shared-buffer UI)
+name: Build iOS IPA (Fix2 inventory and touch)
 
 on:
   workflow_dispatch:
@@ -28,9 +28,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-base-v2
-          restore-keys: |
-            manic-sideload-base-v1-
+          key: manic-sideload-acnl-touch-v3
 
       - name: Install C++ compiler cache
         run: brew install ccache glslang spirv-cross
@@ -69,7 +67,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: bebe010c8b7f523c4f211cc8e7e2e1a74c97bf94
+          ref: 691c690199615d36eff2701fe07d58fc5e346e93
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -113,7 +111,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2U REG ")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2V REG ")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
@@ -141,9 +139,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-base-v2
-          restore-keys: |
-            manic-sideload-base-v1-
+          key: manic-sideload-acnl-touch-v3
 
       - name: Save Azahar compiler cache
         uses: actions/cache/save@v4

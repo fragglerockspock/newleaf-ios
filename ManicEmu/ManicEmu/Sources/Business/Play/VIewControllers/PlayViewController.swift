@@ -2813,6 +2813,8 @@ extension PlayViewController {
         } else if manicGame.gameType == .symbian {
             controllerView.allowTapThroughIfButtonNotHit = true
             ExternalGameControllerManager.shared.isKeyboardInputEnabled = false
+        } else if manicGame.isAzahar3DS {
+            controllerView.allowTapThroughIfButtonNotHit = true
         } else if manicGame.gameType == .wii {
             // Empty overlay falls through to CocoaView POINTER (Wii IR).
             controllerView.allowTapThroughIfButtonNotHit = true
