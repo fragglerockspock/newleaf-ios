@@ -1,4 +1,4 @@
-name: Build iOS IPA (Fix2 paired UI images)
+name: Build iOS IPA (Fix2 transitions and wipe)
 
 on:
   workflow_dispatch:
@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: a07e420f10d5831b52b3ec557e6b382e2be998c7
+          ref: 572f0b540ccdc48a9cc387bcde330af58ff45b36
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -111,7 +111,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2W REG ")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2X REG ")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
