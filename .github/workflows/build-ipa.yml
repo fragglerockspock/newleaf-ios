@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 572f0b540ccdc48a9cc387bcde330af58ff45b36
+          ref: 06936ecb6012ce66d8b358a4a879b1f63c567401
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
