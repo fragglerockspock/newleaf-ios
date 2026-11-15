@@ -13,6 +13,9 @@ permissions:
 
 jobs:
   build-ipa:
+    concurrency:
+      group: acnl-dedicated-launcher
+      cancel-in-progress: true
     runs-on: xcode-27
     timeout-minutes: 152
     steps:
@@ -47,7 +50,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-launcher-v2
+          key: manic-sideload-acnl-launcher-v3
 
       - name: Install C++ compiler cache
         run: brew install ccache glslang spirv-cross
@@ -158,7 +161,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-launcher-v2
+          key: manic-sideload-acnl-launcher-v3
 
       - name: Save Azahar compiler cache
         uses: actions/cache/save@v4

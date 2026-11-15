@@ -62,65 +62,14 @@ enum System: CaseIterable
     }
     
     static var allCores: [DeltaCoreProtocol] {
-        return [NES.core,
-                SNES.core,
-                ThreeDS.core,
-                GBC.core,
-                GBA.core,
-                PSP.core,
-                MD.core,
-                MCD.core,
-                S2X.core,
-                SG1000.core,
-                GG.core,
-                MS.core,
-                SS.core,
-                N64.core,
-                GB.core,
-                VB.core,
-                PM.core,
-                PS1.core,
-                DC.core,
-                DS.core,
-                FDS.core,
-                Arcade.core,
-                A2600.core,
-                A5200.core,
-                A7800.core,
-                Lynx.core,
-                Jaguar.core,
-                J2ME.core,
-                DOOM.core,
-                DOS.core,
-                Symbian.core,
-                NGC.core,
-                Wii.core,
-                PCE.core,
-                NGP.core,
-                C64.core,
-                Amiga.core,
-                WSC.core,
-                FLASH.core]
+        return [ThreeDS.core]
     }
-    
+
     ///Returns all supported game types.
     ///By default, it uses the user's sorting order.
     ///If the user has not set a sorting order, it returns them in reverse order based on the sequence of newly added platforms.
     static var allGameTypes: [GameType] {
-        let allSystems = System.allCases
-        if var gameTypeOrders = R.Config.PlatformOrder {
-            if gameTypeOrders.count != allSystems.count {
-                let missGameTypes = allSystems.map({
-                    $0.gameType.localizedShortName
-                }).filter({
-                    !gameTypeOrders.contains([$0])
-                })
-                gameTypeOrders = missGameTypes + gameTypeOrders
-            }
-            return gameTypeOrders.compactMap { GameType(shortName: $0) }
-        } else {
-            return allSystems.map { $0.gameType }
-        }
+        return [._3ds]
     }
 }
 
