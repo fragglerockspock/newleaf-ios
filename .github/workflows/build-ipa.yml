@@ -1,4 +1,4 @@
-name: Build ACNL dialogue cue and animated ToolRing
+name: Build ACNL game-style overlay captions
 
 on:
   workflow_dispatch:
@@ -89,7 +89,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 92e3bfc3ecc411223550643f3069befc645cd2a3
+          ref: aff0cf5ea7ee779f9fb5306e861a2db65790a199
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -102,6 +102,7 @@ jobs:
           CCACHE_COMPILERCHECK: content
         run: |
           set -euo pipefail
+          python3 tools/test_leaf_overlay_font.py
           python3 tools/test_leaf_tool_ring.py
           python3 tools/test_leaf_ui.py
           ASAN_OPTIONS=detect_leaks=0 LEAF_SANITIZE=1 python3 tools/test_leaf_top_layout.py
@@ -178,6 +179,7 @@ jobs:
           test -d "$FRAMEWORK_PATH"
           test -f "$FRAMEWORK_PATH/Info.plist"
           test -s "$CORE_SOURCE"
+          cp azahar-acnl/misc/licenses/nunito-OFL.txt "$APP_PATH/NewLeafOverlayFont-OFL.txt"
           EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$FRAMEWORK_PATH/Info.plist")"
           test "$EXECUTABLE" = "azahar.libretro"
           cp "$CORE_SOURCE" "$FRAMEWORK_PATH/$EXECUTABLE"
@@ -213,7 +215,7 @@ jobs:
           test -d "$APP_PATH"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111502' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111503' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
