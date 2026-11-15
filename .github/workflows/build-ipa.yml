@@ -1,4 +1,4 @@
-name: Build iOS IPA (Fix2AB closing crops and smooth ring)
+name: Build ACNL dedicated launcher
 
 on:
   workflow_dispatch:
@@ -23,12 +23,31 @@ jobs:
           lfs: true
           fetch-depth: 1
 
+      - name: Apply New Leaf identity
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib, subprocess
+          assets = pathlib.Path("ManicEmu/ManicEmu/Resources/Assets.xcassets")
+          source = pathlib.Path("Branding/NewLeaf.png")
+          icons = assets / "AppIcon.appiconset"
+          contents = json.loads((icons / "Contents.json").read_text())
+          for image in contents["images"]:
+              filename = image.get("filename")
+              if not filename:
+                  continue
+              points = float(image["size"].split("x")[0])
+              scale = float(image.get("scale", "1x").rstrip("x"))
+              size = str(round(points * scale))
+              subprocess.run(["sips", "-z", size, size, str(source), "--out", str(icons / filename)], check=True, stdout=subprocess.DEVNULL)
+          PY
+
       - name: Restore cached Manic app
         id: manic-cache
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-touch-v3
+          key: manic-sideload-acnl-launcher-v1
 
       - name: Install C++ compiler cache
         run: brew install ccache glslang spirv-cross
@@ -139,7 +158,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-touch-v3
+          key: manic-sideload-acnl-launcher-v1
 
       - name: Save Azahar compiler cache
         uses: actions/cache/save@v4
@@ -189,6 +208,11 @@ jobs:
           set -euo pipefail
           APP_PATH="$RUNNER_TEMP/BaseManicApp/ManicEmuSideload.app"
           test -d "$APP_PATH"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111501' "$APP_PATH/Info.plist"
+          APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
+          strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
           ditto "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/ManicEmu.app"
           cd "$RUNNER_TEMP/ipa"

@@ -506,70 +506,24 @@
 		00000000000051A100000200 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DE1F1A256BC78B0099425B /* InfoPlist.strings */; };
 		00000000000051A100000201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A001FB24555A5F006E0F0E /* Assets.xcassets */; };
 		00000000000051A100000202 /* System.core in Resources */ = {isa = PBXBuildFile; fileRef = 57C7595C2FD451130093A2B3 /* System.core */; };
-		00000000000051A100000204 /* mednafen.wswan.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000205 /* mesen-s.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909689303EF38000A53656 /* mesen-s.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000206 /* gpsp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909600303D792500A53656 /* gpsp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000207 /* puae.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03741E2E8CB24E5790E97476 /* puae.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000208 /* vice.x64sc.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000209 /* mednafen.ngp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000020A /* mednafen.pce.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000020B /* dolphin.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000020C /* eka2l1.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00000000000051A10000020D /* MoltenVK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C75B4D2FD592860093A2B3 /* MoltenVK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00000000000051A10000020F /* Libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE172DD32F7700AABF98 /* Libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00000000000051A100000210 /* azahar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578E22F12FD1EE6600A2749A /* azahar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000211 /* pcsx.rearmed.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000212 /* snes9x.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000213 /* dosbox.pure.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000214 /* prboom.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000215 /* virtualjaguar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000216 /* holani.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9A2F23403100EA24F1 /* holani.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000217 /* prosystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000218 /* atari800.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE992F23403100EA24F1 /* atari800.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000219 /* stella.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9C2F23403100EA24F1 /* stella.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021A /* desmume.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021B /* fbneo.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3482ECE0A1A00DE17E9 /* fbneo.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021C /* mame.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021D /* melondsds.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481672E7F059D001D4598 /* melondsds.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021E /* bsnes-jg.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000021F /* clownmdemu.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481282E77F482001D4598 /* clownmdemu.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000220 /* gearsystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481292E77F482001D4598 /* gearsystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000221 /* flycast-jitless.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000222 /* flycast.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5771C2902E699C880062EDE0 /* flycast.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000223 /* mgba.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE942E6020880045F76E /* mgba.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000224 /* vbam.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE952E6020880045F76E /* vbam.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000225 /* gambatte.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE932E6020880045F76E /* gambatte.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000226 /* bsnes.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE872E5F53620045F76E /* bsnes.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000227 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000228 /* pokemini.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5744C71B2E375EFF0088081A /* pokemini.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A100000229 /* mednafen.vb.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022A /* mupen64plus.next.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022B /* yabause.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE8522E0F97780079E3AA /* yabause.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022C /* mednafen.saturn.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022D /* picodrive.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022E /* nestopia.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		00000000000051A10000022F /* ppsspp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		000FF60D4C0C45458B42CDD8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 578E1FF52FD16A4600A2749A /* SnapKit */; };
 		023B2A9DBF6F473782A64EC6 /* Wii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDA01B1DB4E15B8F0C5C6 /* Wii.swift */; };
-		0750DCA306CA4EB7A036C987 /* mednafen.ngp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0965D1CD6E9344C18E3454A6 /* Amiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93489E15EFD47F2AE825436 /* Amiga.swift */; };
 		09F571A7F5D7461983B3A140 /* ColorfulX in Frameworks */ = {isa = PBXBuildFile; productRef = 57CDCD032FD5A9CE005BA4C8 /* ColorfulX */; };
 		0E964747C5B24B348A8665E0 /* Wii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDA01B1DB4E15B8F0C5C6 /* Wii.swift */; };
 		0EE14A659E7A4FE7B9DED3C4 /* SDL in Frameworks */ = {isa = PBXBuildFile; productRef = 571BB9392DA44D6B00830134 /* SDL */; };
 		1186ADAD578A4FAC9E5337EA /* NGP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4867970474EB9B27D4D8D /* NGP.swift */; };
-		16D61BE375CD4F61ACCF0FF2 /* puae.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03741E2E8CB24E5790E97476 /* puae.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CAAD3DB49C34DAD998DD033 /* PCE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E402E22DFA4C9D96FFBC89 /* PCE.swift */; };
 		1EADD4E491B048A4A3E448B1 /* SMBClient in Frameworks */ = {isa = PBXBuildFile; productRef = 57F632A22D6F17AB007270E8 /* SMBClient */; };
 		20DCABBC83024417BC08EB72 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 578E23D02FD2BD0800A2749A /* ZipArchive */; };
-		2197E4E9458342E6AF80B1BA /* vice.x64sc.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		220A1FDAB02E4E41999363CA /* RuffleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B188E5A6DD343E5960ABEF0 /* RuffleView.swift */; };
 		2315CFACDCA546689D506EEB /* FLASH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809D2DE31034EF5B9135498 /* FLASH.swift */; };
-		23CE581FDA6A4771B987DE69 /* dolphin.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23DA80D04F904D45A8C893AC /* GCDWebUploader in Frameworks */ = {isa = PBXBuildFile; productRef = 578E23862FD2981800A2749A /* GCDWebUploader */; };
 		2A580A2CC68B45E99AB72675 /* Fireworks in Frameworks */ = {isa = PBXBuildFile; productRef = 578E24562FD3F9D700A2749A /* Fireworks */; };
-		2A84A76AE2A94C3EB048E0D1 /* dolphin.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3008E79240634E729DB35FEB /* NGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691349DFB9FB4307A3151455 /* NGC.swift */; };
-		349598F48E5541F89B1CBE80 /* eka2l1.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		390955369D6D495092F62AC2 /* Device in Frameworks */ = {isa = PBXBuildFile; productRef = 578E26E22FD41F8300A2749A /* Device */; };
 		3C1B9BAFB4C4403B92AD40D6 /* BlurUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5706B0BD2DFDE4570066122E /* BlurUIKit */; };
 		3CC0A81B407547FBA1CF0693 /* C64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C004DF500A40988FE64A18 /* C64.swift */; };
@@ -598,9 +552,6 @@
 		5706B0FD2DFFED170066122E /* menu_pipeline.metal in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE4C2DD3326400AABF98 /* menu_pipeline.metal */; };
 		5708351C2D3216980079D410 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5708351B2D3216930079D410 /* Log.swift */; };
 		570A28002DCF03CF001249C6 /* PLzmaSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 570A27FF2DCF03CF001249C6 /* PLzmaSDK */; };
-		570C614730543805007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		570C61483054380D007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		570C614930543815007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		570F590C2DC5B838007BFD92 /* ThemeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F590B2DC5B82F007BFD92 /* ThemeSettingView.swift */; };
 		570F590E2DC5BAEE007BFD92 /* DesktopIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F590D2DC5BAE1007BFD92 /* DesktopIconCollectionViewCell.swift */; };
 		570F59102DC5BB03007BFD92 /* ThemeColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F590F2DC5BAF4007BFD92 /* ThemeColorCollectionViewCell.swift */; };
@@ -650,8 +601,6 @@
 		5726FED82D71B63E00041AD5 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726FED72D71B63A00041AD5 /* CacheManager.swift */; };
 		5726FF462D741F5C00041AD5 /* ColorfulX in Frameworks */ = {isa = PBXBuildFile; productRef = 5726FF452D741F5C00041AD5 /* ColorfulX */; };
 		5726FF812D74AC9D00041AD5 /* RoundAndBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726FF802D74AC8D00041AD5 /* RoundAndBorderView.swift */; };
-		572918D32F8B9F7200985D2C /* snes9x.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		572918D52F8B9F7A00985D2C /* pcsx.rearmed.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		572C5CB42F6E983600776F8C /* J2MENetworkBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C5CB32F6E983600776F8C /* J2MENetworkBridge.swift */; };
 		572D026B2F87E3F8000BD6F4 /* PretendoNetworkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02682F87E3F1000BD6F4 /* PretendoNetworkingView.swift */; };
 		572D02722F87E45B000BD6F4 /* PretendoNetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02702F87E453000BD6F4 /* PretendoNetworkingConfig.swift */; };
@@ -665,7 +614,6 @@
 		57399B192E42EDEA00AB73DD /* DeadZoneControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57399B182E42EDE800AB73DD /* DeadZoneControl.swift */; };
 		5739D1BE2DA79D2A0090409D /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739D1BD2DA79D220090409D /* DataExtension.swift */; };
 		573BECBD2D1D3F6B008AD18D /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BECBC2D1D3F6B008AD18D /* HomeTabBar.swift */; };
-		573CED7E2F1CE2D900EA24F1 /* desmume.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		573CEE0E2F20D05800EA24F1 /* RomPatcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE0C2F20D05100EA24F1 /* RomPatcherView.swift */; };
 		573CEE122F20D46D00EA24F1 /* LocalWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE112F20D46B00EA24F1 /* LocalWebServer.swift */; };
 		573CEE2B2F21036800EA24F1 /* MultiDiscAddCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE292F21035800EA24F1 /* MultiDiscAddCollectionCell.swift */; };
@@ -676,33 +624,22 @@
 		573CEE8C2F2338D800EA24F1 /* A7800.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE882F2338D500EA24F1 /* A7800.swift */; };
 		573CEE912F23396400EA24F1 /* Jaguar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE902F23396200EA24F1 /* Jaguar.swift */; };
 		573CEE962F23396D00EA24F1 /* Lynx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CEE952F23396C00EA24F1 /* Lynx.swift */; };
-		573CEE9F2F23404B00EA24F1 /* stella.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9C2F23403100EA24F1 /* stella.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		573CEEA22F23405800EA24F1 /* atari800.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE992F23403100EA24F1 /* atari800.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		573CEEA52F23405F00EA24F1 /* prosystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		573CEEA82F23407500EA24F1 /* holani.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9A2F23403100EA24F1 /* holani.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		573CEEAB2F23408400EA24F1 /* virtualjaguar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		573DE1A72F6AF6C70091CE59 /* ZipHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE1A52F6AF6AA0091CE59 /* ZipHandlerView.swift */; };
 		5742E1B42FDA9A330031A726 /* ASLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742E1B32FDA9A2C0031A726 /* ASLabelView.swift */; };
 		5742E1B52FDA9A330031A726 /* ASLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742E1B32FDA9A2C0031A726 /* ASLabelView.swift */; };
 		5742E1CD2FDA9FA10031A726 /* AttributedString in Frameworks */ = {isa = PBXBuildFile; productRef = 5742E1CC2FDA9FA10031A726 /* AttributedString */; };
 		5744C6FF2E368BB40088081A /* NoControllCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5744C6FE2E368BA50088081A /* NoControllCollectionView.swift */; };
 		5744C7182E375BF40088081A /* PM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5744C7172E375BF00088081A /* PM.swift */; };
-		5744C71D2E375F0F0088081A /* pokemini.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5744C71B2E375EFF0088081A /* pokemini.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574789BC2D4F8769006F0D99 /* SectionIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574789B92D4F8769006F0D99 /* SectionIndexView.swift */; };
 		574789BE2D4F8769006F0D99 /* SectionIndexViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574789BA2D4F8769006F0D99 /* SectionIndexViewItem.swift */; };
 		57478A712D52037F006F0D99 /* RandomGameCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57478A702D52037F006F0D99 /* RandomGameCollectionReusableView.swift */; };
-		574ABE882E5F537C0045F76E /* bsnes.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE872E5F53620045F76E /* bsnes.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574ABE992E6021550045F76E /* GBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574ABE982E6021520045F76E /* GBC.swift */; };
-		574ABE9E2E6024800045F76E /* gambatte.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE932E6020880045F76E /* gambatte.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574ABEBC2E609FE60045F76E /* GBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574ABEBB2E609FE30045F76E /* GBA.swift */; };
-		574ABEC42E60A3C30045F76E /* vbam.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE952E6020880045F76E /* vbam.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		574ABEC52E60A3C90045F76E /* mgba.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE942E6020880045F76E /* mgba.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574BCC742F324C92009BD74E /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BCC732F324C8E009BD74E /* Cipher.swift */; };
 		57526B7E2EADEED0003F91BD /* FDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57526B7D2EADEECD003F91BD /* FDS.swift */; };
 		5754D88B2E274AC7001EA5ED /* OnlinePlaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754D88A2E274AB9001EA5ED /* OnlinePlaySettingView.swift */; };
 		5754D8932E2751CA001EA5ED /* WFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754D8922E2751C0001EA5ED /* WFC.swift */; };
 		5754D8962E2752C6001EA5ED /* ExtraKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754D8952E2752C0001EA5ED /* ExtraKey.swift */; };
-		5754D8C42E27A573001EA5ED /* mednafen.vb.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5754D8C82E27A864001EA5ED /* VB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754D8C72E27A861001EA5ED /* VB.swift */; };
 		575A39CC2DCCFA6B00B28FC2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 575A39CB2DCCFA6B00B28FC2 /* SwiftSoup */; };
 		575A39CE2DCD011500B28FC2 /* OnlineCoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A39CD2DCD00FE00B28FC2 /* OnlineCoverManager.swift */; };
@@ -722,10 +659,8 @@
 		5760A3A63029E813002CCF6B /* ShaderToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A3A53029E80D002CCF6B /* ShaderToy.swift */; };
 		5760A3A73029E813002CCF6B /* ShaderToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A3A53029E80D002CCF6B /* ShaderToy.swift */; };
 		57655C1B2DF6AD04003E4A6E /* MD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655C1A2DF6AD02003E4A6E /* MD.swift */; };
-		57655C222DF6B970003E4A6E /* picodrive.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57655C262DF6BCF3003E4A6E /* PlatformSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655C252DF6BCE3003E4A6E /* PlatformSelectionView.swift */; };
 		576A7DA82E3B4B1400008E35 /* PS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A7DA72E3B4B1200008E35 /* PS1.swift */; };
-		576A7DAE2E3B4FD400008E35 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		576C46312E16D9090008D087 /* MultiDiscDescCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C46302E16D8F20008D087 /* MultiDiscDescCollectionCell.swift */; };
 		576C46352E16DA1B0008D087 /* MultiDiscItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C46342E16DA0D0008D087 /* MultiDiscItemCollectionCell.swift */; };
 		576C4BDD3041749100DB526E /* BackgroundMusicKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C4BD83041748700DB526E /* BackgroundMusicKit.swift */; };
@@ -804,7 +739,6 @@
 		5781F5462EF1384500916D8B /* EmulatorInteractionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781F5442EF1383F00916D8B /* EmulatorInteractionKit.swift */; };
 		5781F5AE2EF45C8200916D8B /* JGenesisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781F5AB2EF45C6900916D8B /* JGenesisView.swift */; };
 		578452BA2F6A79370020A88F /* DOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578452B92F6A79340020A88F /* DOS.swift */; };
-		578452C02F6A7F500020A88F /* dosbox.pure.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		578E1FF62FD16A4600A2749A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 578E1FF52FD16A4600A2749A /* SnapKit */; };
 		578E20912FD16DA500A2749A /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 578E20902FD16DA500A2749A /* CollectionViewPagingLayout */; };
 		578E209E2FD1B8CB00A2749A /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 578E209D2FD1B8CB00A2749A /* CollectionViewPagingLayout */; };
@@ -1309,53 +1243,10 @@
 		57909559303C7D9100A53656 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DE1F1A256BC78B0099425B /* InfoPlist.strings */; };
 		5790955A303C7D9100A53656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A001FB24555A5F006E0F0E /* Assets.xcassets */; };
 		5790955B303C7D9100A53656 /* System.core in Resources */ = {isa = PBXBuildFile; fileRef = 57C7595C2FD451130093A2B3 /* System.core */; };
-		5790955E303C7D9100A53656 /* puae.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03741E2E8CB24E5790E97476 /* puae.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790955F303C7D9100A53656 /* vice.x64sc.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909560303C7D9100A53656 /* mednafen.ngp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909561303C7D9100A53656 /* mednafen.pce.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909562303C7D9100A53656 /* dolphin.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909563303C7D9100A53656 /* eka2l1.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57909564303C7D9100A53656 /* MoltenVK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C75B4D2FD592860093A2B3 /* MoltenVK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57909565303C7D9100A53656 /* Citra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C75AB02FD5575D0093A2B3 /* Citra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57909566303C7D9100A53656 /* Libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE172DD32F7700AABF98 /* Libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57909567303C7D9100A53656 /* azahar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578E22F12FD1EE6600A2749A /* azahar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909568303C7D9100A53656 /* pcsx.rearmed.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909569303C7D9100A53656 /* snes9x.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956A303C7D9100A53656 /* dosbox.pure.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956B303C7D9100A53656 /* prboom.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956C303C7D9100A53656 /* virtualjaguar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956D303C7D9100A53656 /* holani.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9A2F23403100EA24F1 /* holani.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956E303C7D9100A53656 /* prosystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790956F303C7D9100A53656 /* atari800.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE992F23403100EA24F1 /* atari800.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909570303C7D9100A53656 /* stella.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9C2F23403100EA24F1 /* stella.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909571303C7D9100A53656 /* desmume.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909572303C7D9100A53656 /* fbneo.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3482ECE0A1A00DE17E9 /* fbneo.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909573303C7D9100A53656 /* mame.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909574303C7D9100A53656 /* melondsds.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481672E7F059D001D4598 /* melondsds.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909575303C7D9100A53656 /* bsnes-jg.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909576303C7D9100A53656 /* clownmdemu.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481282E77F482001D4598 /* clownmdemu.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909577303C7D9100A53656 /* gearsystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481292E77F482001D4598 /* gearsystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909578303C7D9100A53656 /* flycast-jitless.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909579303C7D9100A53656 /* flycast.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5771C2902E699C880062EDE0 /* flycast.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957A303C7D9100A53656 /* mgba.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE942E6020880045F76E /* mgba.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957B303C7D9100A53656 /* vbam.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE952E6020880045F76E /* vbam.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957C303C7D9100A53656 /* gambatte.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE932E6020880045F76E /* gambatte.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957D303C7D9100A53656 /* bsnes.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE872E5F53620045F76E /* bsnes.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957E303C7D9100A53656 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790957F303C7D9100A53656 /* pokemini.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5744C71B2E375EFF0088081A /* pokemini.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909580303C7D9100A53656 /* mednafen.vb.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909581303C7D9100A53656 /* mupen64plus.next.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909582303C7D9100A53656 /* yabause.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE8522E0F97780079E3AA /* yabause.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909583303C7D9100A53656 /* mednafen.saturn.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909584303C7D9100A53656 /* picodrive.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909585303C7D9100A53656 /* nestopia.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909586303C7D9100A53656 /* ppsspp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909605303D793A00A53656 /* gpsp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909600303D792500A53656 /* gpsp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909608303D794200A53656 /* gpsp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909600303D792500A53656 /* gpsp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790960E303D795200A53656 /* gpsp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909600303D792500A53656 /* gpsp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5790968F303EF38F00A53656 /* mesen-s.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909689303EF38000A53656 /* mesen-s.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909690303EF39B00A53656 /* mesen-s.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909689303EF38000A53656 /* mesen-s.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57909691303EF3A300A53656 /* mesen-s.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57909689303EF38000A53656 /* mesen-s.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		579096B5303F065800A53656 /* HXPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 579096B4303F065800A53656 /* HXPhotoPicker */; };
 		579096BB303F066D00A53656 /* HXPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 579096BA303F066D00A53656 /* HXPhotoPicker */; };
 		57913AF52D5D89CF004D51AA /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57913AF42D5D89CC004D51AA /* TouchController.swift */; };
@@ -1407,12 +1298,7 @@
 		579DDADE305AE9BB003AB167 /* SwiftCloudDrive in Frameworks */ = {isa = PBXBuildFile; productRef = 579DDADD305AE9BB003AB167 /* SwiftCloudDrive */; };
 		579DDAE0305AE9E5003AB167 /* SwiftCloudDrive in Frameworks */ = {isa = PBXBuildFile; productRef = 579DDADF305AE9E5003AB167 /* SwiftCloudDrive */; };
 		579E54512FD4237B000F08E7 /* FluentDarkModeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 579E54502FD4237B000F08E7 /* FluentDarkModeKit */; };
-		57A480CC2E733B83001D4598 /* flycast-jitless.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57A480E72E74030E001D4598 /* CheevosChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A480E62E740301001D4598 /* CheevosChallengeView.swift */; };
-		57A4812D2E77F98D001D4598 /* gearsystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481292E77F482001D4598 /* gearsystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57A4812E2E77F993001D4598 /* clownmdemu.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481282E77F482001D4598 /* clownmdemu.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57A481542E7A8B84001D4598 /* bsnes-jg.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57A481682E7F05AB001D4598 /* melondsds.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481672E7F059D001D4598 /* melondsds.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57A4816A2E7F05D2001D4598 /* NDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A481692E7F05CD001D4598 /* NDS.swift */; };
 		57A912042F3B767800628B04 /* NDSSaveConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A912022F3B765B00628B04 /* NDSSaveConverter.swift */; };
 		57ABFA812FE8054D001C1425 /* PageBackgroundMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ABFA7D2FE80522001C1425 /* PageBackgroundMaskView.swift */; };
@@ -1448,7 +1334,6 @@
 		57B592462FD0799C003C4235 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 57B592452FD0799C003C4235 /* RswiftLibrary */; settings = {ATTRIBUTES = (Required, ); }; };
 		57B592572FD07B05003C4235 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 57B592562FD07B05003C4235 /* SFSafeSymbols */; };
 		57B5E3142ECC625E00DE17E9 /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5E3122ECC625600DE17E9 /* Arcade.swift */; };
-		57B5E31B2ECC738500DE17E9 /* mame.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57B5E3242ECCCD0800DE17E9 /* MAMEKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5E3222ECCCD0100DE17E9 /* MAMEKit.swift */; };
 		57B5E3362ECDF75F00DE17E9 /* MAMEBiosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5E3342ECDF75800DE17E9 /* MAMEBiosView.swift */; };
 		57B6EBDB2D758819002E619C /* GamesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B6EBDA2D7587FE002E619C /* GamesSelectionView.swift */; };
@@ -1511,7 +1396,6 @@
 		57BFBE6C2DD3331A00AABF98 /* griffin_cpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE672DD3331A00AABF98 /* griffin_cpp.cpp */; };
 		57BFBE6D2DD3331A00AABF98 /* griffin.c in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE662DD3331A00AABF98 /* griffin.c */; settings = {COMPILER_FLAGS = "-include $(SRCROOT)/../Dependencies/Libretro/pkg/apple/ManicEMU/git_version.h"; }; };
 		57BFBE6E2DD3331A00AABF98 /* griffin_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE692DD3331A00AABF98 /* griffin_objc.m */; };
-		57BFBE732DD3361800AABF98 /* ppsspp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57BFBE772DD336E000AABF98 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE762DD336DD00AABF98 /* main.swift */; };
 		57BFBE792DD336FC00AABF98 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE782DD336F100AABF98 /* Application.swift */; };
 		57BFBE902DD435C900AABF98 /* PSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BFBE8F2DD435C700AABF98 /* PSP.swift */; };
@@ -1855,44 +1739,12 @@
 		57CDCF502FD5CBD3005BA4C8 /* Citra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C75AB02FD5575D0093A2B3 /* Citra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57CDCF512FD5CBD3005BA4C8 /* Libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE172DD32F7700AABF98 /* Libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57CDCF522FD5CBD3005BA4C8 /* azahar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578E22F12FD1EE6600A2749A /* azahar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF532FD5CBD3005BA4C8 /* pcsx.rearmed.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF542FD5CBD3005BA4C8 /* snes9x.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF562FD5CBD3005BA4C8 /* dosbox.pure.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF572FD5CBD3005BA4C8 /* prboom.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF582FD5CBD3005BA4C8 /* virtualjaguar.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF592FD5CBD3005BA4C8 /* holani.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9A2F23403100EA24F1 /* holani.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5A2FD5CBD3005BA4C8 /* prosystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5B2FD5CBD3005BA4C8 /* atari800.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE992F23403100EA24F1 /* atari800.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5C2FD5CBD3005BA4C8 /* stella.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CEE9C2F23403100EA24F1 /* stella.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5D2FD5CBD3005BA4C8 /* desmume.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5E2FD5CBD3005BA4C8 /* fbneo.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3482ECE0A1A00DE17E9 /* fbneo.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF5F2FD5CBD3005BA4C8 /* mame.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF602FD5CBD3005BA4C8 /* melondsds.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481672E7F059D001D4598 /* melondsds.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF612FD5CBD3005BA4C8 /* bsnes-jg.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF622FD5CBD3005BA4C8 /* clownmdemu.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481282E77F482001D4598 /* clownmdemu.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF632FD5CBD3005BA4C8 /* gearsystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481292E77F482001D4598 /* gearsystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF642FD5CBD3005BA4C8 /* flycast-jitless.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF672FD5CBD3005BA4C8 /* flycast.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5771C2902E699C880062EDE0 /* flycast.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF682FD5CBD3005BA4C8 /* mgba.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE942E6020880045F76E /* mgba.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF692FD5CBD3005BA4C8 /* vbam.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE952E6020880045F76E /* vbam.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6A2FD5CBD3005BA4C8 /* gambatte.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE932E6020880045F76E /* gambatte.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6B2FD5CBD3005BA4C8 /* bsnes.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574ABE872E5F53620045F76E /* bsnes.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6C2FD5CBD3005BA4C8 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6D2FD5CBD3005BA4C8 /* pokemini.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5744C71B2E375EFF0088081A /* pokemini.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6E2FD5CBD3005BA4C8 /* mednafen.vb.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF6F2FD5CBD3005BA4C8 /* mupen64plus.next.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF702FD5CBD3005BA4C8 /* yabause.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE8522E0F97780079E3AA /* yabause.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF712FD5CBD3005BA4C8 /* mednafen.saturn.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF722FD5CBD3005BA4C8 /* picodrive.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF732FD5CBD3005BA4C8 /* nestopia.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57CDCF742FD5CBD3005BA4C8 /* ppsspp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57CDCF852FD5CC08005BA4C8 /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = 57CDCF842FD5CC08005BA4C8 /* FLEX */; };
 		57CDCF872FD5CC10005BA4C8 /* ShowTouches in Frameworks */ = {isa = PBXBuildFile; productRef = 57CDCF862FD5CC10005BA4C8 /* ShowTouches */; };
 		57CDCF892FD5CC1C005BA4C8 /* LookInsideServer in Frameworks */ = {isa = PBXBuildFile; productRef = 57CDCF882FD5CC1C005BA4C8 /* LookInsideServer */; };
 		57CDCFBD2FD5D154005BA4C8 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 57CDCFBC2FD5D154005BA4C8 /* KeychainAccess */; };
 		57D029192E6C9C5200BF1F9D /* CheevosProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D029182E6C9C4000BF1F9D /* CheevosProgressView.swift */; };
 		57D0BC0A2E1AD2BE008C3049 /* N64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BC092E1AD2BB008C3049 /* N64.swift */; };
-		57D0BC0F2E1AD35D008C3049 /* mupen64plus.next.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57D481FE3014A2480030A771 /* ShaderLIstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D481FD3014A2430030A771 /* ShaderLIstView.swift */; };
 		57D481FF3014A2480030A771 /* ShaderLIstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D481FD3014A2430030A771 /* ShaderLIstView.swift */; };
 		57D48251301702BA0030A771 /* FileBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48250301702B20030A771 /* FileBrowserView.swift */; };
@@ -1960,10 +1812,8 @@
 		57DA89322D8328510074052A /* CKAccountStatusExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DA89312D8328420074052A /* CKAccountStatusExtensions.swift */; };
 		57DC7FF52F52E931004B6FFD /* J2MEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC7FF32F52E92B004B6FFD /* J2MEView.swift */; };
 		57DC7FFC2F52EC39004B6FFD /* WeakScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC7FFB2F52EC38004B6FFD /* WeakScriptMessageHandler.swift */; };
-		57DCE7A12E0C434C0079E3AA /* mednafen.saturn.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57DCE7DB2E0D38650079E3AA /* INIFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DCE7DA2E0D385E0079E3AA /* INIFile.swift */; };
 		57DCE8302E0E9B040079E3AA /* LimitedTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DCE82E2E0E9ACB0079E3AA /* LimitedTextInputView.swift */; };
-		57DCE8542E0F978B0079E3AA /* yabause.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCE8522E0F97780079E3AA /* yabause.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57DCE8562E0FC9BC0079E3AA /* CoreSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DCE8552E0FC9B60079E3AA /* CoreSelectionView.swift */; };
 		57DE10472D606C4E00CDD82A /* SymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE10462D606C4700CDD82A /* SymbolButton.swift */; };
 		57DF840C2D61B3D500AA0AAB /* BlankSlateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF840B2D61B3D500AA0AAB /* BlankSlateCollectionView.swift */; };
@@ -2053,7 +1903,6 @@
 		57EED0362EC8D9C4003971BD /* JITSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EED0342EC8D9BB003971BD /* JITSettingView.swift */; };
 		57EED0772ECB817C003971BD /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EED0752ECB8172003971BD /* IconView.swift */; };
 		57F0D81A2DE1C2D700760F57 /* GameListStyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0D8192DE1C2C200760F57 /* GameListStyleCollectionViewCell.swift */; };
-		57F0D83E2DE2C5AE00760F57 /* nestopia.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57F0D8422DE2CD8D00760F57 /* NES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0D8412DE2CD8B00760F57 /* NES.swift */; };
 		57F1A9182D7D25B900D0CC93 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F1A9172D7D25B600D0CC93 /* GameInfoView.swift */; };
 		57F1A9252D7D36D200D0CC93 /* GameViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F1A9242D7D36CD00D0CC93 /* GameViewExtensions.swift */; };
@@ -2113,7 +1962,6 @@
 		58D0423D007B462DB353AA16 /* WSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B86ECC930242969A108735 /* WSC.swift */; };
 		5A74D5E598F44663BCC2F1EE /* Citra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C75AB02FD5575D0093A2B3 /* Citra.framework */; };
 		5F5353532F884986BF3BA407 /* ObjcExceptionBridging in Frameworks */ = {isa = PBXBuildFile; productRef = 5713306B2D91AFE00043C28A /* ObjcExceptionBridging */; };
-		5F74DFC689D94836B20159EB /* mednafen.ngp.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6606391530954FC29D88A93E /* MarqueeLabel in Frameworks */ = {isa = PBXBuildFile; productRef = 578E24432FD3EEE300A2749A /* MarqueeLabel */; };
 		68A011012026091500000002 /* RommClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A011012026091500000001 /* RommClient.swift */; };
 		68A011012026091500000004 /* RommServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A011012026091500000003 /* RommServiceProvider.swift */; };
@@ -2155,7 +2003,6 @@
 		A65D0A457B5749D3B4E590B2 /* NGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691349DFB9FB4307A3151455 /* NGC.swift */; };
 		A672B510CD9141B18392D564 /* NGP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4867970474EB9B27D4D8D /* NGP.swift */; };
 		A8D9BF2608324215AB272D58 /* BlankSlate in Frameworks */ = {isa = PBXBuildFile; productRef = 578E23A42FD2AA0600A2749A /* BlankSlate */; };
-		AA122ED56C3140C1864D4EC8 /* mednafen.pce.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD7D0110DD684A0DA5505F08 /* WSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B86ECC930242969A108735 /* WSC.swift */; };
 		ADE1A2C2A17E4D50AE2EB564 /* PLzmaSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 570A27FF2DCF03CF001249C6 /* PLzmaSDK */; };
 		AE5A3FEEB61B4A0B9DB6C05A /* JXBanner in Frameworks */ = {isa = PBXBuildFile; productRef = 578E23B62FD2B7D400A2749A /* JXBanner */; };
@@ -2179,14 +2026,11 @@
 		CB40A54BC3524226B63A8972 /* DNSPageView in Frameworks */ = {isa = PBXBuildFile; productRef = 578E20A22FD1B94E00A2749A /* DNSPageView */; };
 		CE17343B61E1466393584BD7 /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = 57C759052FD42BD80093A2B3 /* Haptica */; };
 		D247CA47581E4F73B110A2B7 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 578E24002FD31C0100A2749A /* ZIPFoundation */; };
-		D90358FF409D7405F5E406CC /* prboom.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D90F84D29ECD49358B4B71A1 /* SQLiteCipher in Frameworks */ = {isa = PBXBuildFile; productRef = 57C759862FD459310093A2B3 /* SQLiteCipher */; };
 		D94752D7D273464B9E4B625C /* PCE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E402E22DFA4C9D96FFBC89 /* PCE.swift */; };
 		DB45CA067BB44A96B550FAAC /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 57C758FB2FD42AF00093A2B3 /* SFSafeSymbols */; };
-		DE2953C2BE0E42C8A8F0EEAB /* eka2l1.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DECAA5F8551449B78169BA34 /* Tiercel in Frameworks */ = {isa = PBXBuildFile; productRef = 57C7590F2FD42C710093A2B3 /* Tiercel */; };
 		E1199B23C71247BFBC208325 /* Permission in Frameworks */ = {isa = PBXBuildFile; productRef = 578E26C82FD41B6300A2749A /* Permission */; };
-		E2162239F8584ED6843B9760 /* puae.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03741E2E8CB24E5790E97476 /* puae.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2CFD49A14B2461EA3CBFA66 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 575A39CB2DCCFA6B00B28FC2 /* SwiftSoup */; };
 		E2EA5DEE0D384C1281D9CF83 /* WebDavKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57F632E22D714E46007270E8 /* WebDavKit */; };
 		E4DFA97292C840F29BC49ED5 /* RuffleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B188E5A6DD343E5960ABEF0 /* RuffleView.swift */; };
@@ -2229,7 +2073,6 @@
 		E524FC033090E598009885DA /* BitBopKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524FC013090E591009885DA /* BitBopKit.swift */; };
 		E524FC043090E598009885DA /* BitBopKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524FC013090E591009885DA /* BitBopKit.swift */; };
 		E524FC053090E598009885DA /* BitBopKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524FC013090E591009885DA /* BitBopKit.swift */; };
-		E5385955E04D43598CAC5694 /* vice.x64sc.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E5A00BB23080B2CC00E99223 /* ProHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A00BB13080B2C200E99223 /* ProHUDExtensions.swift */; };
 		E5A00BB33080B2CC00E99223 /* ProHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A00BB13080B2C200E99223 /* ProHUDExtensions.swift */; };
 		E5A00BB43080B2CC00E99223 /* ProHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A00BB13080B2C200E99223 /* ProHUDExtensions.swift */; };
@@ -2261,7 +2104,6 @@
 		F86B554686AA4FD091DF9AEE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57C7590A2FD42C2E0093A2B3 /* IQKeyboardManagerSwift */; };
 		F9A3C32228B84AD391F34585 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 578E26D32FD41D9300A2749A /* NVActivityIndicatorView */; };
 		FDD0064DAC7645118F826ED7 /* Closures in Frameworks */ = {isa = PBXBuildFile; productRef = 578E231F2FD288C600A2749A /* Closures */; };
-		FFD8F5F4CE02425E8BA80296 /* mednafen.pce.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2326,49 +2168,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				00000000000051A100000204 /* mednafen.wswan.libretro.framework in Embed Frameworks */,
-				00000000000051A100000205 /* mesen-s.libretro.framework in Embed Frameworks */,
-				00000000000051A100000206 /* gpsp.libretro.framework in Embed Frameworks */,
-				00000000000051A100000207 /* puae.libretro.framework in Embed Frameworks */,
-				00000000000051A100000208 /* vice.x64sc.libretro.framework in Embed Frameworks */,
-				00000000000051A100000209 /* mednafen.ngp.libretro.framework in Embed Frameworks */,
-				00000000000051A10000020A /* mednafen.pce.libretro.framework in Embed Frameworks */,
-				00000000000051A10000020B /* dolphin.libretro.framework in Embed Frameworks */,
-				00000000000051A10000020C /* eka2l1.libretro.framework in Embed Frameworks */,
 				00000000000051A10000020D /* MoltenVK.xcframework in Embed Frameworks */,
 				00000000000051A10000020F /* Libretro.framework in Embed Frameworks */,
 				00000000000051A100000210 /* azahar.libretro.framework in Embed Frameworks */,
-				00000000000051A100000211 /* pcsx.rearmed.libretro.framework in Embed Frameworks */,
-				00000000000051A100000212 /* snes9x.libretro.framework in Embed Frameworks */,
-				00000000000051A100000213 /* dosbox.pure.libretro.framework in Embed Frameworks */,
-				00000000000051A100000214 /* prboom.libretro.framework in Embed Frameworks */,
-				00000000000051A100000215 /* virtualjaguar.libretro.framework in Embed Frameworks */,
-				00000000000051A100000216 /* holani.libretro.framework in Embed Frameworks */,
-				00000000000051A100000217 /* prosystem.libretro.framework in Embed Frameworks */,
-				00000000000051A100000218 /* atari800.libretro.framework in Embed Frameworks */,
-				00000000000051A100000219 /* stella.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021A /* desmume.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021B /* fbneo.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021C /* mame.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021D /* melondsds.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021E /* bsnes-jg.libretro.framework in Embed Frameworks */,
-				00000000000051A10000021F /* clownmdemu.libretro.framework in Embed Frameworks */,
-				00000000000051A100000220 /* gearsystem.libretro.framework in Embed Frameworks */,
-				00000000000051A100000221 /* flycast-jitless.libretro.framework in Embed Frameworks */,
-				00000000000051A100000222 /* flycast.libretro.framework in Embed Frameworks */,
-				00000000000051A100000223 /* mgba.libretro.framework in Embed Frameworks */,
-				00000000000051A100000224 /* vbam.libretro.framework in Embed Frameworks */,
-				00000000000051A100000225 /* gambatte.libretro.framework in Embed Frameworks */,
-				00000000000051A100000226 /* bsnes.libretro.framework in Embed Frameworks */,
-				00000000000051A100000227 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */,
-				00000000000051A100000228 /* pokemini.libretro.framework in Embed Frameworks */,
-				00000000000051A100000229 /* mednafen.vb.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022A /* mupen64plus.next.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022B /* yabause.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022C /* mednafen.saturn.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022D /* picodrive.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022E /* nestopia.libretro.framework in Embed Frameworks */,
-				00000000000051A10000022F /* ppsspp.libretro.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2390,50 +2192,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				570C614930543815007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */,
-				57909691303EF3A300A53656 /* mesen-s.libretro.framework in Embed Frameworks */,
-				5790960E303D795200A53656 /* gpsp.libretro.framework in Embed Frameworks */,
-				5790955E303C7D9100A53656 /* puae.libretro.framework in Embed Frameworks */,
-				5790955F303C7D9100A53656 /* vice.x64sc.libretro.framework in Embed Frameworks */,
-				57909560303C7D9100A53656 /* mednafen.ngp.libretro.framework in Embed Frameworks */,
-				57909561303C7D9100A53656 /* mednafen.pce.libretro.framework in Embed Frameworks */,
-				57909562303C7D9100A53656 /* dolphin.libretro.framework in Embed Frameworks */,
-				57909563303C7D9100A53656 /* eka2l1.libretro.framework in Embed Frameworks */,
 				57909564303C7D9100A53656 /* MoltenVK.xcframework in Embed Frameworks */,
 				57909565303C7D9100A53656 /* Citra.framework in Embed Frameworks */,
 				57909566303C7D9100A53656 /* Libretro.framework in Embed Frameworks */,
 				57909567303C7D9100A53656 /* azahar.libretro.framework in Embed Frameworks */,
-				57909568303C7D9100A53656 /* pcsx.rearmed.libretro.framework in Embed Frameworks */,
-				57909569303C7D9100A53656 /* snes9x.libretro.framework in Embed Frameworks */,
-				5790956A303C7D9100A53656 /* dosbox.pure.libretro.framework in Embed Frameworks */,
-				5790956B303C7D9100A53656 /* prboom.libretro.framework in Embed Frameworks */,
-				5790956C303C7D9100A53656 /* virtualjaguar.libretro.framework in Embed Frameworks */,
-				5790956D303C7D9100A53656 /* holani.libretro.framework in Embed Frameworks */,
-				5790956E303C7D9100A53656 /* prosystem.libretro.framework in Embed Frameworks */,
-				5790956F303C7D9100A53656 /* atari800.libretro.framework in Embed Frameworks */,
-				57909570303C7D9100A53656 /* stella.libretro.framework in Embed Frameworks */,
-				57909571303C7D9100A53656 /* desmume.libretro.framework in Embed Frameworks */,
-				57909572303C7D9100A53656 /* fbneo.libretro.framework in Embed Frameworks */,
-				57909573303C7D9100A53656 /* mame.libretro.framework in Embed Frameworks */,
-				57909574303C7D9100A53656 /* melondsds.libretro.framework in Embed Frameworks */,
-				57909575303C7D9100A53656 /* bsnes-jg.libretro.framework in Embed Frameworks */,
-				57909576303C7D9100A53656 /* clownmdemu.libretro.framework in Embed Frameworks */,
-				57909577303C7D9100A53656 /* gearsystem.libretro.framework in Embed Frameworks */,
-				57909578303C7D9100A53656 /* flycast-jitless.libretro.framework in Embed Frameworks */,
-				57909579303C7D9100A53656 /* flycast.libretro.framework in Embed Frameworks */,
-				5790957A303C7D9100A53656 /* mgba.libretro.framework in Embed Frameworks */,
-				5790957B303C7D9100A53656 /* vbam.libretro.framework in Embed Frameworks */,
-				5790957C303C7D9100A53656 /* gambatte.libretro.framework in Embed Frameworks */,
-				5790957D303C7D9100A53656 /* bsnes.libretro.framework in Embed Frameworks */,
-				5790957E303C7D9100A53656 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */,
-				5790957F303C7D9100A53656 /* pokemini.libretro.framework in Embed Frameworks */,
-				57909580303C7D9100A53656 /* mednafen.vb.libretro.framework in Embed Frameworks */,
-				57909581303C7D9100A53656 /* mupen64plus.next.libretro.framework in Embed Frameworks */,
-				57909582303C7D9100A53656 /* yabause.libretro.framework in Embed Frameworks */,
-				57909583303C7D9100A53656 /* mednafen.saturn.libretro.framework in Embed Frameworks */,
-				57909584303C7D9100A53656 /* picodrive.libretro.framework in Embed Frameworks */,
-				57909585303C7D9100A53656 /* nestopia.libretro.framework in Embed Frameworks */,
-				57909586303C7D9100A53656 /* ppsspp.libretro.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2455,50 +2217,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				570C614730543805007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */,
-				5790968F303EF38F00A53656 /* mesen-s.libretro.framework in Embed Frameworks */,
-				57909605303D793A00A53656 /* gpsp.libretro.framework in Embed Frameworks */,
-				16D61BE375CD4F61ACCF0FF2 /* puae.libretro.framework in Embed Frameworks */,
-				E5385955E04D43598CAC5694 /* vice.x64sc.libretro.framework in Embed Frameworks */,
-				0750DCA306CA4EB7A036C987 /* mednafen.ngp.libretro.framework in Embed Frameworks */,
-				FFD8F5F4CE02425E8BA80296 /* mednafen.pce.libretro.framework in Embed Frameworks */,
-				2A84A76AE2A94C3EB048E0D1 /* dolphin.libretro.framework in Embed Frameworks */,
-				DE2953C2BE0E42C8A8F0EEAB /* eka2l1.libretro.framework in Embed Frameworks */,
 				57CDCF4F2FD5CBD3005BA4C8 /* MoltenVK.xcframework in Embed Frameworks */,
 				57CDCF502FD5CBD3005BA4C8 /* Citra.framework in Embed Frameworks */,
 				57CDCF512FD5CBD3005BA4C8 /* Libretro.framework in Embed Frameworks */,
 				57CDCF522FD5CBD3005BA4C8 /* azahar.libretro.framework in Embed Frameworks */,
-				57CDCF532FD5CBD3005BA4C8 /* pcsx.rearmed.libretro.framework in Embed Frameworks */,
-				57CDCF542FD5CBD3005BA4C8 /* snes9x.libretro.framework in Embed Frameworks */,
-				57CDCF562FD5CBD3005BA4C8 /* dosbox.pure.libretro.framework in Embed Frameworks */,
-				57CDCF572FD5CBD3005BA4C8 /* prboom.libretro.framework in Embed Frameworks */,
-				57CDCF582FD5CBD3005BA4C8 /* virtualjaguar.libretro.framework in Embed Frameworks */,
-				57CDCF592FD5CBD3005BA4C8 /* holani.libretro.framework in Embed Frameworks */,
-				57CDCF5A2FD5CBD3005BA4C8 /* prosystem.libretro.framework in Embed Frameworks */,
-				57CDCF5B2FD5CBD3005BA4C8 /* atari800.libretro.framework in Embed Frameworks */,
-				57CDCF5C2FD5CBD3005BA4C8 /* stella.libretro.framework in Embed Frameworks */,
-				57CDCF5D2FD5CBD3005BA4C8 /* desmume.libretro.framework in Embed Frameworks */,
-				57CDCF5E2FD5CBD3005BA4C8 /* fbneo.libretro.framework in Embed Frameworks */,
-				57CDCF5F2FD5CBD3005BA4C8 /* mame.libretro.framework in Embed Frameworks */,
-				57CDCF602FD5CBD3005BA4C8 /* melondsds.libretro.framework in Embed Frameworks */,
-				57CDCF612FD5CBD3005BA4C8 /* bsnes-jg.libretro.framework in Embed Frameworks */,
-				57CDCF622FD5CBD3005BA4C8 /* clownmdemu.libretro.framework in Embed Frameworks */,
-				57CDCF632FD5CBD3005BA4C8 /* gearsystem.libretro.framework in Embed Frameworks */,
-				57CDCF642FD5CBD3005BA4C8 /* flycast-jitless.libretro.framework in Embed Frameworks */,
-				57CDCF672FD5CBD3005BA4C8 /* flycast.libretro.framework in Embed Frameworks */,
-				57CDCF682FD5CBD3005BA4C8 /* mgba.libretro.framework in Embed Frameworks */,
-				57CDCF692FD5CBD3005BA4C8 /* vbam.libretro.framework in Embed Frameworks */,
-				57CDCF6A2FD5CBD3005BA4C8 /* gambatte.libretro.framework in Embed Frameworks */,
-				57CDCF6B2FD5CBD3005BA4C8 /* bsnes.libretro.framework in Embed Frameworks */,
-				57CDCF6C2FD5CBD3005BA4C8 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */,
-				57CDCF6D2FD5CBD3005BA4C8 /* pokemini.libretro.framework in Embed Frameworks */,
-				57CDCF6E2FD5CBD3005BA4C8 /* mednafen.vb.libretro.framework in Embed Frameworks */,
-				57CDCF6F2FD5CBD3005BA4C8 /* mupen64plus.next.libretro.framework in Embed Frameworks */,
-				57CDCF702FD5CBD3005BA4C8 /* yabause.libretro.framework in Embed Frameworks */,
-				57CDCF712FD5CBD3005BA4C8 /* mednafen.saturn.libretro.framework in Embed Frameworks */,
-				57CDCF722FD5CBD3005BA4C8 /* picodrive.libretro.framework in Embed Frameworks */,
-				57CDCF732FD5CBD3005BA4C8 /* nestopia.libretro.framework in Embed Frameworks */,
-				57CDCF742FD5CBD3005BA4C8 /* ppsspp.libretro.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2509,48 +2231,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				570C61483054380D007E0C53 /* mednafen.wswan.libretro.framework in Embed Frameworks */,
-				57909690303EF39B00A53656 /* mesen-s.libretro.framework in Embed Frameworks */,
-				57909608303D794200A53656 /* gpsp.libretro.framework in Embed Frameworks */,
-				E2162239F8584ED6843B9760 /* puae.libretro.framework in Embed Frameworks */,
-				2197E4E9458342E6AF80B1BA /* vice.x64sc.libretro.framework in Embed Frameworks */,
-				5F74DFC689D94836B20159EB /* mednafen.ngp.libretro.framework in Embed Frameworks */,
-				AA122ED56C3140C1864D4EC8 /* mednafen.pce.libretro.framework in Embed Frameworks */,
-				23CE581FDA6A4771B987DE69 /* dolphin.libretro.framework in Embed Frameworks */,
-				349598F48E5541F89B1CBE80 /* eka2l1.libretro.framework in Embed Frameworks */,
 				57C75B502FD5928E0093A2B3 /* MoltenVK.xcframework in Embed Frameworks */,
 				57C75AB12FD557640093A2B3 /* Citra.framework in Embed Frameworks */,
 				57C75A072FD498480093A2B3 /* Libretro.framework in Embed Frameworks */,
 				578E22F42FD1EE7500A2749A /* azahar.libretro.framework in Embed Frameworks */,
-				572918D52F8B9F7A00985D2C /* pcsx.rearmed.libretro.framework in Embed Frameworks */,
-				572918D32F8B9F7200985D2C /* snes9x.libretro.framework in Embed Frameworks */,
-				578452C02F6A7F500020A88F /* dosbox.pure.libretro.framework in Embed Frameworks */,
-				D90358FF409D7405F5E406CC /* prboom.libretro.framework in Embed Frameworks */,
-				573CEEAB2F23408400EA24F1 /* virtualjaguar.libretro.framework in Embed Frameworks */,
-				573CEEA82F23407500EA24F1 /* holani.libretro.framework in Embed Frameworks */,
-				573CEEA52F23405F00EA24F1 /* prosystem.libretro.framework in Embed Frameworks */,
-				573CEEA22F23405800EA24F1 /* atari800.libretro.framework in Embed Frameworks */,
-				573CEE9F2F23404B00EA24F1 /* stella.libretro.framework in Embed Frameworks */,
-				573CED7E2F1CE2D900EA24F1 /* desmume.libretro.framework in Embed Frameworks */,
-				57B5E31B2ECC738500DE17E9 /* mame.libretro.framework in Embed Frameworks */,
-				57A481682E7F05AB001D4598 /* melondsds.libretro.framework in Embed Frameworks */,
-				57A481542E7A8B84001D4598 /* bsnes-jg.libretro.framework in Embed Frameworks */,
-				57A4812E2E77F993001D4598 /* clownmdemu.libretro.framework in Embed Frameworks */,
-				57A4812D2E77F98D001D4598 /* gearsystem.libretro.framework in Embed Frameworks */,
-				57A480CC2E733B83001D4598 /* flycast-jitless.libretro.framework in Embed Frameworks */,
-				574ABEC52E60A3C90045F76E /* mgba.libretro.framework in Embed Frameworks */,
-				574ABEC42E60A3C30045F76E /* vbam.libretro.framework in Embed Frameworks */,
-				574ABE9E2E6024800045F76E /* gambatte.libretro.framework in Embed Frameworks */,
-				574ABE882E5F537C0045F76E /* bsnes.libretro.framework in Embed Frameworks */,
-				576A7DAE2E3B4FD400008E35 /* mednafen.psx.hw.libretro.framework in Embed Frameworks */,
-				5744C71D2E375F0F0088081A /* pokemini.libretro.framework in Embed Frameworks */,
-				5754D8C42E27A573001EA5ED /* mednafen.vb.libretro.framework in Embed Frameworks */,
-				57D0BC0F2E1AD35D008C3049 /* mupen64plus.next.libretro.framework in Embed Frameworks */,
-				57DCE8542E0F978B0079E3AA /* yabause.libretro.framework in Embed Frameworks */,
-				57DCE7A12E0C434C0079E3AA /* mednafen.saturn.libretro.framework in Embed Frameworks */,
-				57655C222DF6B970003E4A6E /* picodrive.libretro.framework in Embed Frameworks */,
-				57F0D83E2DE2C5AE00760F57 /* nestopia.libretro.framework in Embed Frameworks */,
-				57BFBE732DD3361800AABF98 /* ppsspp.libretro.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2569,15 +2253,11 @@
 
 /* Begin PBXFileReference section */
 		00000000000051A100000002 /* ManicEmuSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManicEmuSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03741E2E8CB24E5790E97476 /* puae.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = puae.libretro.framework; path = ../Cores/puae.libretro.framework; sourceTree = SOURCE_ROOT; };
 		0A2DDA01B1DB4E15B8F0C5C6 /* Wii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wii.swift; sourceTree = "<group>"; };
 		16B86ECC930242969A108735 /* WSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSC.swift; sourceTree = "<group>"; };
 		2068D6E791D56FF6148997EA /* DOOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOOM.swift; sourceTree = "<group>"; };
-		20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = prboom.libretro.framework; path = ../Cores/prboom.libretro.framework; sourceTree = SOURCE_ROOT; };
-		25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = eka2l1.libretro.framework; path = ../Cores/eka2l1.libretro.framework; sourceTree = SOURCE_ROOT; };
 		37C004DF500A40988FE64A18 /* C64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C64.swift; sourceTree = "<group>"; };
 		460B02C144024C2EAC5EAF21 /* Symbian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbian.swift; sourceTree = "<group>"; };
-		4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mednafen.ngp.libretro.framework; path = ../Cores/mednafen.ngp.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57047A092D85217400C62FF6 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		57047A0B2D852E7200C62FF6 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
 		57047A132D856DB000C62FF6 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
@@ -2594,7 +2274,6 @@
 		5706B0482DFBF8350066122E /* 32X.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 32X.swift; sourceTree = "<group>"; };
 		5706B0592DFC0F7A0066122E /* SS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SS.swift; sourceTree = "<group>"; };
 		5708351B2D3216930079D410 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mednafen.wswan.libretro.framework; sourceTree = "<group>"; };
 		570F590B2DC5B82F007BFD92 /* ThemeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingView.swift; sourceTree = "<group>"; };
 		570F590D2DC5BAE1007BFD92 /* DesktopIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		570F590F2DC5BAF4007BFD92 /* ThemeColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -2636,8 +2315,6 @@
 		5721F1E5302833E600CAC638 /* GameLandscapeCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLandscapeCarouselCell.swift; sourceTree = "<group>"; };
 		5726FED72D71B63A00041AD5 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		5726FF802D74AC8D00041AD5 /* RoundAndBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundAndBorderView.swift; sourceTree = "<group>"; };
-		572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pcsx.rearmed.libretro.framework; path = ../Cores/pcsx.rearmed.libretro.framework; sourceTree = SOURCE_ROOT; };
-		5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = snes9x.libretro.framework; path = ../Cores/snes9x.libretro.framework; sourceTree = SOURCE_ROOT; };
 		572C5CB32F6E983600776F8C /* J2MENetworkBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = J2MENetworkBridge.swift; sourceTree = "<group>"; };
 		572D02682F87E3F1000BD6F4 /* PretendoNetworkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendoNetworkingView.swift; sourceTree = "<group>"; };
 		572D02702F87E453000BD6F4 /* PretendoNetworkingConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendoNetworkingConfig.swift; sourceTree = "<group>"; };
@@ -2651,7 +2328,6 @@
 		57399B182E42EDE800AB73DD /* DeadZoneControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadZoneControl.swift; sourceTree = "<group>"; };
 		5739D1BD2DA79D220090409D /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		573BECBC2D1D3F6B008AD18D /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
-		573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = desmume.libretro.framework; path = ../Cores/desmume.libretro.framework; sourceTree = SOURCE_ROOT; };
 		573CEE0C2F20D05100EA24F1 /* RomPatcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomPatcherView.swift; sourceTree = "<group>"; };
 		573CEE112F20D46B00EA24F1 /* LocalWebServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWebServer.swift; sourceTree = "<group>"; };
 		573CEE292F21035800EA24F1 /* MultiDiscAddCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDiscAddCollectionCell.swift; sourceTree = "<group>"; };
@@ -2662,23 +2338,13 @@
 		573CEE882F2338D500EA24F1 /* A7800.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A7800.swift; sourceTree = "<group>"; };
 		573CEE902F23396200EA24F1 /* Jaguar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jaguar.swift; sourceTree = "<group>"; };
 		573CEE952F23396C00EA24F1 /* Lynx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lynx.swift; sourceTree = "<group>"; };
-		573CEE992F23403100EA24F1 /* atari800.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = atari800.libretro.framework; path = ../Cores/atari800.libretro.framework; sourceTree = SOURCE_ROOT; };
-		573CEE9A2F23403100EA24F1 /* holani.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = holani.libretro.framework; path = ../Cores/holani.libretro.framework; sourceTree = SOURCE_ROOT; };
-		573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = prosystem.libretro.framework; path = ../Cores/prosystem.libretro.framework; sourceTree = SOURCE_ROOT; };
-		573CEE9C2F23403100EA24F1 /* stella.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = stella.libretro.framework; path = ../Cores/stella.libretro.framework; sourceTree = SOURCE_ROOT; };
-		573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = virtualjaguar.libretro.framework; path = ../Cores/virtualjaguar.libretro.framework; sourceTree = SOURCE_ROOT; };
 		573DE1A52F6AF6AA0091CE59 /* ZipHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipHandlerView.swift; sourceTree = "<group>"; };
 		5742E1B32FDA9A2C0031A726 /* ASLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASLabelView.swift; sourceTree = "<group>"; };
 		5744C6FE2E368BA50088081A /* NoControllCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoControllCollectionView.swift; sourceTree = "<group>"; };
 		5744C7172E375BF00088081A /* PM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PM.swift; sourceTree = "<group>"; };
-		5744C71B2E375EFF0088081A /* pokemini.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pokemini.libretro.framework; path = ../Cores/pokemini.libretro.framework; sourceTree = SOURCE_ROOT; };
 		574789B92D4F8769006F0D99 /* SectionIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIndexView.swift; sourceTree = "<group>"; };
 		574789BA2D4F8769006F0D99 /* SectionIndexViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIndexViewItem.swift; sourceTree = "<group>"; };
 		57478A702D52037F006F0D99 /* RandomGameCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGameCollectionReusableView.swift; sourceTree = "<group>"; };
-		574ABE872E5F53620045F76E /* bsnes.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = bsnes.libretro.framework; path = ../Cores/bsnes.libretro.framework; sourceTree = SOURCE_ROOT; };
-		574ABE932E6020880045F76E /* gambatte.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gambatte.libretro.framework; path = ../Cores/gambatte.libretro.framework; sourceTree = SOURCE_ROOT; };
-		574ABE942E6020880045F76E /* mgba.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mgba.libretro.framework; path = ../Cores/mgba.libretro.framework; sourceTree = SOURCE_ROOT; };
-		574ABE952E6020880045F76E /* vbam.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vbam.libretro.framework; path = ../Cores/vbam.libretro.framework; sourceTree = SOURCE_ROOT; };
 		574ABE982E6021520045F76E /* GBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBC.swift; sourceTree = "<group>"; };
 		574ABEBB2E609FE30045F76E /* GBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBA.swift; sourceTree = "<group>"; };
 		574BCC732F324C8E009BD74E /* Cipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
@@ -2686,7 +2352,6 @@
 		5754D88A2E274AB9001EA5ED /* OnlinePlaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlinePlaySettingView.swift; sourceTree = "<group>"; };
 		5754D8922E2751C0001EA5ED /* WFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFC.swift; sourceTree = "<group>"; };
 		5754D8952E2752C0001EA5ED /* ExtraKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraKey.swift; sourceTree = "<group>"; };
-		5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mednafen.vb.libretro.framework; path = ../Cores/mednafen.vb.libretro.framework; sourceTree = SOURCE_ROOT; };
 		5754D8C72E27A861001EA5ED /* VB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VB.swift; sourceTree = "<group>"; };
 		575A39CD2DCD00FE00B28FC2 /* OnlineCoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCoverManager.swift; sourceTree = "<group>"; };
 		575A39CF2DCD2B3500B28FC2 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
@@ -2703,10 +2368,8 @@
 		5760A38E3029CB94002CCF6B /* CarouselLayoutIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayoutIcon.swift; sourceTree = "<group>"; };
 		5760A3A53029E80D002CCF6B /* ShaderToy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderToy.swift; sourceTree = "<group>"; };
 		57655C1A2DF6AD02003E4A6E /* MD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD.swift; sourceTree = "<group>"; };
-		57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = picodrive.libretro.framework; path = ../Cores/picodrive.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57655C252DF6BCE3003E4A6E /* PlatformSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformSelectionView.swift; sourceTree = "<group>"; };
 		576A7DA72E3B4B1200008E35 /* PS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PS1.swift; sourceTree = "<group>"; };
-		576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mednafen.psx.hw.libretro.framework; path = ../Cores/mednafen.psx.hw.libretro.framework; sourceTree = SOURCE_ROOT; };
 		576C46302E16D8F20008D087 /* MultiDiscDescCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDiscDescCollectionCell.swift; sourceTree = "<group>"; };
 		576C46342E16DA0D0008D087 /* MultiDiscItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDiscItemCollectionCell.swift; sourceTree = "<group>"; };
 		576C4BD83041748700DB526E /* BackgroundMusicKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusicKit.swift; sourceTree = "<group>"; };
@@ -2755,7 +2418,6 @@
 		5771C1A72E6207650062EDE0 /* MobyGamesKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobyGamesKit.swift; sourceTree = "<group>"; };
 		5771C2092E6569B60062EDE0 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		5771C28A2E6986BE0062EDE0 /* DC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC.swift; sourceTree = "<group>"; };
-		5771C2902E699C880062EDE0 /* flycast.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = flycast.libretro.framework; path = ../Cores/flycast.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57744ADD2FD91C8000DECBC7 /* ASButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASButtonView.swift; sourceTree = "<group>"; };
 		57744AE42FD91CB800DECBC7 /* ASProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASProgressView.swift; sourceTree = "<group>"; };
 		57744AEB2FD91CE200DECBC7 /* ASStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASStepView.swift; sourceTree = "<group>"; };
@@ -2838,7 +2500,6 @@
 		5781F5442EF1383F00916D8B /* EmulatorInteractionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorInteractionKit.swift; sourceTree = "<group>"; };
 		5781F5AB2EF45C6900916D8B /* JGenesisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGenesisView.swift; sourceTree = "<group>"; };
 		578452B92F6A79340020A88F /* DOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOS.swift; sourceTree = "<group>"; };
-		578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = dosbox.pure.libretro.framework; path = ../Cores/dosbox.pure.libretro.framework; sourceTree = SOURCE_ROOT; };
 		578E22F12FD1EE6600A2749A /* azahar.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = azahar.libretro.framework; path = ../Cores/azahar.libretro.framework; sourceTree = SOURCE_ROOT; };
 		578E24202FD33FFC00A2749A /* EmulatorBridgingBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorBridgingBase.swift; sourceTree = "<group>"; };
 		578E26872FD408BC00A2749A /* Exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
@@ -2856,8 +2517,6 @@
 		578F28E92F3A055F00D2D998 /* CollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterReusableView.swift; sourceTree = "<group>"; };
 		579076EF2D8AAC2800ED90FB /* TransparentHoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentHoleView.swift; sourceTree = "<group>"; };
 		5790958B303C7D9100A53656 /* ManicEmuSideload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManicEmuSideload.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		57909600303D792500A53656 /* gpsp.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gpsp.libretro.framework; sourceTree = "<group>"; };
-		57909689303EF38000A53656 /* mesen-s.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "mesen-s.libretro.framework"; sourceTree = "<group>"; };
 		57913AF42D5D89CC004D51AA /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		57913B412D5ED722004D51AA /* GameInfoCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoCoverView.swift; sourceTree = "<group>"; };
 		57913B522D5EF71D004D51AA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -2955,12 +2614,7 @@
 		579DDA75305ABE08003AB167 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = "tr.lproj/WhatsNew-Sideload.strings"; sourceTree = "<group>"; };
 		579DDA76305ABE0A003AB167 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = "uk.lproj/WhatsNew-Sideload.strings"; sourceTree = "<group>"; };
 		579DDA77305ABE0C003AB167 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = "vi.lproj/WhatsNew-Sideload.strings"; sourceTree = "<group>"; };
-		57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "flycast-jitless.libretro.framework"; path = "../Cores/flycast-jitless.libretro.framework"; sourceTree = SOURCE_ROOT; };
 		57A480E62E740301001D4598 /* CheevosChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheevosChallengeView.swift; sourceTree = "<group>"; };
-		57A481282E77F482001D4598 /* clownmdemu.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = clownmdemu.libretro.framework; path = ../Cores/clownmdemu.libretro.framework; sourceTree = SOURCE_ROOT; };
-		57A481292E77F482001D4598 /* gearsystem.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gearsystem.libretro.framework; path = ../Cores/gearsystem.libretro.framework; sourceTree = SOURCE_ROOT; };
-		57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bsnes-jg.libretro.framework"; path = "../Cores/bsnes-jg.libretro.framework"; sourceTree = SOURCE_ROOT; };
-		57A481672E7F059D001D4598 /* melondsds.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = melondsds.libretro.framework; path = ../Cores/melondsds.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57A481692E7F05CD001D4598 /* NDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDS.swift; sourceTree = "<group>"; };
 		57A912022F3B765B00628B04 /* NDSSaveConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDSSaveConverter.swift; sourceTree = "<group>"; };
 		57ABFA7D2FE80522001C1425 /* PageBackgroundMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBackgroundMaskView.swift; sourceTree = "<group>"; };
@@ -2983,10 +2637,8 @@
 		57B591E22FD06473003C4235 /* TVAppSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppSceneDelegate.swift; sourceTree = "<group>"; };
 		57B592312FD06BDD003C4235 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		57B5E3122ECC625600DE17E9 /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcade.swift; sourceTree = "<group>"; };
-		57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mame.libretro.framework; path = ../Cores/mame.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57B5E3222ECCCD0100DE17E9 /* MAMEKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMEKit.swift; sourceTree = "<group>"; };
 		57B5E3342ECDF75800DE17E9 /* MAMEBiosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMEBiosView.swift; sourceTree = "<group>"; };
-		57B5E3482ECE0A1A00DE17E9 /* fbneo.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fbneo.libretro.framework; path = ../Cores/fbneo.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57B6EBDA2D7587FE002E619C /* GamesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesSelectionView.swift; sourceTree = "<group>"; };
 		57B6EBF22D769905002E619C /* ProHUDExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProHUDExtentions.swift; sourceTree = "<group>"; };
 		57B6ECBC2D7953E6002E619C /* CheatCodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatCodeListView.swift; sourceTree = "<group>"; };
@@ -7255,7 +6907,6 @@
 		57BFBE672DD3331A00AABF98 /* griffin_cpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = griffin_cpp.cpp; sourceTree = "<group>"; };
 		57BFBE682DD3331A00AABF98 /* griffin_glslang.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = griffin_glslang.cpp; sourceTree = "<group>"; };
 		57BFBE692DD3331A00AABF98 /* griffin_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = griffin_objc.m; sourceTree = "<group>"; };
-		57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ppsspp.libretro.framework; path = ../Cores/ppsspp.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57BFBE762DD336DD00AABF98 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		57BFBE782DD336F100AABF98 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		57BFBE8F2DD435C700AABF98 /* PSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSP.swift; sourceTree = "<group>"; };
@@ -7308,7 +6959,6 @@
 		57CDCF792FD5CBD3005BA4C8 /* ManicEmuDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManicEmuDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D029182E6C9C4000BF1F9D /* CheevosProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheevosProgressView.swift; sourceTree = "<group>"; };
 		57D0BC092E1AD2BB008C3049 /* N64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N64.swift; sourceTree = "<group>"; };
-		57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mupen64plus.next.libretro.framework; path = ../Cores/mupen64plus.next.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57D481FD3014A2430030A771 /* ShaderLIstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLIstView.swift; sourceTree = "<group>"; };
 		57D48250301702B20030A771 /* FileBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBrowserView.swift; sourceTree = "<group>"; };
 		57D482963018F9490030A771 /* GameOptionsSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsSortView.swift; sourceTree = "<group>"; };
@@ -7347,10 +6997,8 @@
 		57DA89312D8328420074052A /* CKAccountStatusExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAccountStatusExtensions.swift; sourceTree = "<group>"; };
 		57DC7FF32F52E92B004B6FFD /* J2MEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = J2MEView.swift; sourceTree = "<group>"; };
 		57DC7FFB2F52EC38004B6FFD /* WeakScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakScriptMessageHandler.swift; sourceTree = "<group>"; };
-		57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mednafen.saturn.libretro.framework; path = ../Cores/mednafen.saturn.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57DCE7DA2E0D385E0079E3AA /* INIFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INIFile.swift; sourceTree = "<group>"; };
 		57DCE82E2E0E9ACB0079E3AA /* LimitedTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedTextInputView.swift; sourceTree = "<group>"; };
-		57DCE8522E0F97780079E3AA /* yabause.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = yabause.libretro.framework; path = ../Cores/yabause.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57DCE8552E0FC9B60079E3AA /* CoreSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSelectionView.swift; sourceTree = "<group>"; };
 		57DE10462D606C4700CDD82A /* SymbolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolButton.swift; sourceTree = "<group>"; };
 		57DF840B2D61B3D500AA0AAB /* BlankSlateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSlateCollectionView.swift; sourceTree = "<group>"; };
@@ -7420,7 +7068,6 @@
 		57EED0342EC8D9BB003971BD /* JITSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JITSettingView.swift; sourceTree = "<group>"; };
 		57EED0752ECB8172003971BD /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		57F0D8192DE1C2C200760F57 /* GameListStyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListStyleCollectionViewCell.swift; sourceTree = "<group>"; };
-		57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nestopia.libretro.framework; path = ../Cores/nestopia.libretro.framework; sourceTree = SOURCE_ROOT; };
 		57F0D8412DE2CD8B00760F57 /* NES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NES.swift; sourceTree = "<group>"; };
 		57F1A9172D7D25B600D0CC93 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		57F1A9242D7D36CD00D0CC93 /* GameViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewExtensions.swift; sourceTree = "<group>"; };
@@ -7458,11 +7105,8 @@
 		68A011012026091500000003 /* RommServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RommServiceProvider.swift; sourceTree = "<group>"; };
 		68A011012026091500000009 /* RommLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RommLibrary.swift; sourceTree = "<group>"; };
 		691349DFB9FB4307A3151455 /* NGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGC.swift; sourceTree = "<group>"; };
-		6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vice.x64sc.libretro.framework; path = ../Cores/vice.x64sc.libretro.framework; sourceTree = SOURCE_ROOT; };
 		78D4867970474EB9B27D4D8D /* NGP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGP.swift; sourceTree = "<group>"; };
 		8B188E5A6DD343E5960ABEF0 /* RuffleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuffleView.swift; sourceTree = "<group>"; };
-		9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mednafen.pce.libretro.framework; path = ../Cores/mednafen.pce.libretro.framework; sourceTree = SOURCE_ROOT; };
-		9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = dolphin.libretro.framework; path = ../Cores/dolphin.libretro.framework; sourceTree = SOURCE_ROOT; };
 		A0E402E22DFA4C9D96FFBC89 /* PCE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCE.swift; sourceTree = "<group>"; };
 		A392D5632E96682600F920E7 /* DisabledTapSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisabledTapSwitch.swift; sourceTree = "<group>"; };
 		A392D5B22E9796B800F920E7 /* ServiceIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIconView.swift; sourceTree = "<group>"; };
@@ -13470,47 +13114,7 @@
 		57C75AD42FD572260093A2B3 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
-				570C6146305437FE007E0C53 /* mednafen.wswan.libretro.framework */,
-				57909689303EF38000A53656 /* mesen-s.libretro.framework */,
-				03741E2E8CB24E5790E97476 /* puae.libretro.framework */,
-				6A6021052A14459DA6F729AB /* vice.x64sc.libretro.framework */,
-				4C56A0D131A148448EA9816B /* mednafen.ngp.libretro.framework */,
-				9408D7BF872544CFABE4D652 /* mednafen.pce.libretro.framework */,
-				9770068F58CC4F29B21DE396 /* dolphin.libretro.framework */,
-				25F38CF54CA347238295BE77 /* eka2l1.libretro.framework */,
 				578E22F12FD1EE6600A2749A /* azahar.libretro.framework */,
-				572918892F8B9F6400985D2C /* pcsx.rearmed.libretro.framework */,
-				5729188A2F8B9F6400985D2C /* snes9x.libretro.framework */,
-				578452BE2F6A7F380020A88F /* dosbox.pure.libretro.framework */,
-				573CEE992F23403100EA24F1 /* atari800.libretro.framework */,
-				573CEE9A2F23403100EA24F1 /* holani.libretro.framework */,
-				573CEE9B2F23403100EA24F1 /* prosystem.libretro.framework */,
-				573CEE9C2F23403100EA24F1 /* stella.libretro.framework */,
-				573CEE9D2F23403100EA24F1 /* virtualjaguar.libretro.framework */,
-				573CED7C2F1CE2C100EA24F1 /* desmume.libretro.framework */,
-				57B5E3482ECE0A1A00DE17E9 /* fbneo.libretro.framework */,
-				57B5E3192ECC735D00DE17E9 /* mame.libretro.framework */,
-				57A481672E7F059D001D4598 /* melondsds.libretro.framework */,
-				57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */,
-				57A481282E77F482001D4598 /* clownmdemu.libretro.framework */,
-				57A481292E77F482001D4598 /* gearsystem.libretro.framework */,
-				5771C2902E699C880062EDE0 /* flycast.libretro.framework */,
-				57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */,
-				574ABE932E6020880045F76E /* gambatte.libretro.framework */,
-				574ABE942E6020880045F76E /* mgba.libretro.framework */,
-				574ABE952E6020880045F76E /* vbam.libretro.framework */,
-				574ABE872E5F53620045F76E /* bsnes.libretro.framework */,
-				576A7DAA2E3B4FBC00008E35 /* mednafen.psx.hw.libretro.framework */,
-				5744C71B2E375EFF0088081A /* pokemini.libretro.framework */,
-				5754D8C22E27A562001EA5ED /* mednafen.vb.libretro.framework */,
-				57D0BC0D2E1AD31A008C3049 /* mupen64plus.next.libretro.framework */,
-				57DCE8522E0F97780079E3AA /* yabause.libretro.framework */,
-				57DCE79D2E0C43310079E3AA /* mednafen.saturn.libretro.framework */,
-				57655C1E2DF6B94C003E4A6E /* picodrive.libretro.framework */,
-				57F0D83C2DE2C59900760F57 /* nestopia.libretro.framework */,
-				57BFBE712DD3360A00AABF98 /* ppsspp.libretro.framework */,
-				20B6A88FB41ED3142FD4FD9E /* prboom.libretro.framework */,
-				57909600303D792500A53656 /* gpsp.libretro.framework */,
 			);
 			name = Cores;
 			path = ../Cores;

@@ -121,6 +121,9 @@ class SettingsListView: BaseView {
                 
             }
         }
+        for section in datas.keys {
+            datas[section] = datas[section]?.filter { ![.globalCoreSwitch, .bios, .onlinePlay, .featuredItems, .quickGame, .coverScraping].contains($0.type) }
+        }
         return datas
     }()
     

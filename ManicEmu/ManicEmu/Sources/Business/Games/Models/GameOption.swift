@@ -1125,6 +1125,8 @@ enum GameOption: Int, CaseIterable {
         }
         
         var allOptions = Set(GameOption.allCases)
+        allOptions.remove(.switchCore)
+        allOptions.remove(.platformChange)
         allOptions.remove(.editLink)
         
         if GameType.gameTypes(multiPlatformFileExtension: game.fileExtension).count == 0 {

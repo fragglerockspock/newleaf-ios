@@ -145,6 +145,11 @@ class PlayViewController: GameViewController {
     private var skinSwitchBindDatas = [String: Bool]()
     
     static func startGame(game: Game, saveState: GameSaveState? = nil, in scene: UIWindowScene?) {
+        guard game.isNewLeafGame else {
+            UIView.makeToast(message: "This app plays Animal Crossing: New Leaf only.")
+            return
+        }
+        game.changeDefaultCore(coreIndex: 1)
         var tabletopPaused = false
         var holdTabletopPause = false
         if #available(iOS 27.1, *) {
@@ -2813,8 +2818,6 @@ extension PlayViewController {
         } else if manicGame.gameType == .symbian {
             controllerView.allowTapThroughIfButtonNotHit = true
             ExternalGameControllerManager.shared.isKeyboardInputEnabled = false
-        } else if manicGame.isAzahar3DS {
-            controllerView.allowTapThroughIfButtonNotHit = true
         } else if manicGame.gameType == .wii {
             // Empty overlay falls through to CocoaView POINTER (Wii IR).
             controllerView.allowTapThroughIfButtonNotHit = true
