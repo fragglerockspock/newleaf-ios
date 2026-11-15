@@ -1,4 +1,4 @@
-name: Build ACNL Main Street and camera updates
+name: Build Leaf native title graft
 
 on:
   workflow_dispatch:
@@ -89,7 +89,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 2822644dd890ed1613f465ae047f869c472237f7
+          ref: 4650f41a7dec478b326ff9b7afa0dd9a88a10fbf
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -102,6 +102,7 @@ jobs:
           CCACHE_COMPILERCHECK: content
         run: |
           set -euo pipefail
+          ASAN_OPTIONS=detect_leaks=0 LEAF_SANITIZE=1 python3 tools/test_leaf_layout_patch.py
           python3 tools/test_leaf_camera.py
           python3 tools/test_leaf_overlay_font.py
           python3 tools/test_leaf_tool_ring.py
@@ -135,7 +136,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AE REG ")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AF REG ", b"Leaf native title window graft and animation wrapper active")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
@@ -216,7 +217,7 @@ jobs:
           test -d "$APP_PATH"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111504' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111505' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
