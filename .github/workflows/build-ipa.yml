@@ -1,4 +1,4 @@
-name: Build ACNL dedicated launcher
+name: Build ACNL dialogue cue and animated ToolRing
 
 on:
   workflow_dispatch:
@@ -89,7 +89,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 513934d434fa98869ac9f46e501da1f7ec4be9bf
+          ref: 21622eec336d949977ffde758ca203ca697f3ca2
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -133,7 +133,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AB REG ")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AC REG ")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
@@ -213,7 +213,7 @@ jobs:
           test -d "$APP_PATH"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111501' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026111502' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
