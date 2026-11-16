@@ -1,0 +1,80 @@
+name: Verify Fix2AH IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/verify-fix2ah-ipa.yml"
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Wait for the pinned app build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: fragglerockspock/newleaf-ios
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, time
+          for attempt in range(90):
+              result = subprocess.run(["gh", "api", "repos/fragglerockspock/newleaf-ios/actions/runs/43975536104"], check=True, capture_output=True, text=True)
+              run = json.loads(result.stdout)
+              assert run["head_sha"] == "5435ad197c19ff7d242ef3731ee9163a6be71656"
+              if run["status"] == "completed":
+                  assert run["conclusion"] == "success", run["conclusion"]
+                  break
+              time.sleep(10)
+          else:
+              raise RuntimeError("App build did not complete")
+          PY
+
+      - name: Download the pinned build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ManicEmu-ACNL-IPA
+          run-id: 43975536104
+          github-token: ${{ github.token }}
+          path: artifact
+
+      - name: Verify and name the unsigned IPA
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, plistlib, shutil, struct, zipfile
+          source = pathlib.Path("artifact/ManicEmu-unsigned.ipa")
+          assert source.is_file()
+          with zipfile.ZipFile(source) as archive:
+              assert archive.testzip() is None
+              root = "Payload/ManicEmu.app/"
+              info = plistlib.loads(archive.read(root + "Info.plist"))
+              assert info["CFBundleIdentifier"] == "com.aoshuang.manicemu"
+              assert info["CFBundleVersion"] == "2026111601"
+              assert info["CFBundleDisplayName"] == "Animal Crossing: New Leaf"
+              core = archive.read(root + "Frameworks/azahar.libretro.framework/azahar.libretro")
+              assert struct.unpack_from("<I", core, 4)[0] == 0x100000c
+              markers = [b"UI FIX 2AH REG ", b"leaf_title_tag.bclim", b"Leaf native title window graft and animation wrapper active", b"LeafKeyTexel", b"Leaf ToolRing Vulkan overlay active", b"Leaf UI Vulkan composition active"]
+              assert all(marker in core for marker in markers)
+              assert b"ACNL Dedicated Launcher 1" in archive.read(root + info["CFBundleExecutable"])
+              cores = sorted({name.split(".libretro.framework")[0].split("/")[-1] for name in archive.namelist() if ".libretro.framework/" in name})
+              assert cores == ["azahar"], cores
+              assert len(archive.read(root + "NewLeafOverlayFont-OFL.txt")) > 4000
+          output = pathlib.Path("AnimalCrossing-NewLeaf-Fix2AH.ipa")
+          shutil.copyfile(source, output)
+          print(json.dumps({"file": str(output), "bytes": output.stat().st_size, "sha256": hashlib.sha256(output.read_bytes()).hexdigest(), "build": info["CFBundleVersion"], "verification": "CRC, ARM64, title marker, app identity, core selection, frontend and licence passed"}))
+          PY
+
+      - name: Upload verified IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: AnimalCrossing-NewLeaf-Fix2AH-unsigned
+          path: AnimalCrossing-NewLeaf-Fix2AH.ipa
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
