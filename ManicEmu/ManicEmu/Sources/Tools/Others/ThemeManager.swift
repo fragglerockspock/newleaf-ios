@@ -53,31 +53,9 @@ class ThemeManager {
     }
     
     private func updateIcon(isSetup: Bool = false) {
-        Log.debug("开始更新图标")
-        let theme = Theme.defalut
-        Log.debug("主题图标:\(theme.icon)")
-        if let alternateIconName = UIApplication.shared.alternateIconName {
-            Log.debug("已设置图标:\(alternateIconName)")
-            if alternateIconName == theme.icon {
-                Log.debug("无需更新图标")
-                return
-            }
-        } else {
-            Log.debug("当前未设置图标 说明使用的是默认图标")
-            if theme.icon == "AppIcon" {
-                Log.debug("无需更新图标")
-                return
-            }
-        }
-        
-        if theme.icon == "AppIcon" {
-            Log.debug("恢复默认图标")
+        if UIApplication.shared.alternateIconName != nil {
             UIApplication.shared.setAlternateIconName(nil)
-        } else {
-            Log.debug("设置图标:\(theme.icon)")
-            UIApplication.shared.setAlternateIconName(theme.icon)
         }
-        
     }
     
     private func updateThemeColor() {

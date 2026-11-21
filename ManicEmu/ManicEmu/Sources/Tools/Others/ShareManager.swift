@@ -27,7 +27,7 @@ class ShareManager: NSObject {
         //副标题
         data.originalURL = URL(fileURLWithPath: R.string.localizable.shareAppSubtitle())
         //展示的图标
-        data.iconProvider = NSItemProvider(object: R.image.appicon()!)
+        data.iconProvider = NSItemProvider(object: (UIImage(named: "NewLeafIcon") ?? UIImage()))
         return data
     }()
 }

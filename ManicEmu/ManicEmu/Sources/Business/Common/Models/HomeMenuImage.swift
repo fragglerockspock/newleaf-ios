@@ -47,7 +47,7 @@ class HomeMenuImage: UIImage, @unchecked Sendable {
             } else if gameType == .dos {
                 brand = R.image.home_menu_dos()?.scaled(toHeight: size.height * brandRatio)
             } else if gameType == .symbian {
-                brand = R.image.symbian_group_brand(compatibleWith: .init(userInterfaceStyle: .light))?.scaled(toHeight: size.height * brandRatio)
+                brand = UIImage(named: "NewLeafIcon")?.scaled(toHeight: size.height * brandRatio)
             }
             if let brand {
                 if R.Style.GameCoverStyle == .style1 {
