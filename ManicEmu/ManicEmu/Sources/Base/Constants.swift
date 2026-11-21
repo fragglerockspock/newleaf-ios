@@ -559,7 +559,6 @@ extension _R {
         static let LibretroSavePath = Document
         static let GamesDB = Resource.appendingPathComponent("Games.db")
         static let MAMEDB = Resource.appendingPathComponent("MAME.db")
-        static let ExtrasDB = Resource.appendingPathComponent("Extras.db")
         static let Assets = Document.appendingPathComponent("Assets")
         static let GameplayManuals = Document.appendingPathComponent("Manuals")
         static let NESPalettes = Resource.appendingPathComponent("NESPalettes")

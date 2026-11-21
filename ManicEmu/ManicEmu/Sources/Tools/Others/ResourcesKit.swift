@@ -43,7 +43,7 @@ struct ResourcesKit {
 //        forceRefresh = true
 //#endif
         
-        if forceRefresh || !FileManager.default.fileExists(atPath: R.Path.Resource) || !FileManager.default.fileExists(atPath: R.Path.ExtrasDB) {
+        if forceRefresh || !FileManager.default.fileExists(atPath: R.Path.Resource) {
             //将3DS的文件从Library移到Document 暴露给用户使用
             if FileManager.default.fileExists(atPath: R.Path.Library.appendingPathComponent("3DS")),
                !FileManager.default.fileExists(atPath: R.Path.ThreeDS) {

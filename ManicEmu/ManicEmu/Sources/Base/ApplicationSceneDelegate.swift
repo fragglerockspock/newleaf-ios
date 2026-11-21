@@ -176,7 +176,6 @@ class ApplicationSceneDelegate: UIResponder, UIWindowSceneDelegate {
             return true
         }
         return !FileManager.default.fileExists(atPath: R.Path.Resource)
-            || !FileManager.default.fileExists(atPath: R.Path.ExtrasDB)
     }
     
     func sceneWillResignActive(_ scene: UIScene) {
