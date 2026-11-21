@@ -1,0 +1,30 @@
+name: Inspect Cleanup1 archive failure
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/inspect-cleanup-build.yml"]
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract archive errors
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os, re, subprocess
+          url = "https://api.github.com/repos/fragglerockspock/newleaf-ios/actions/jobs/136984710717/logs"
+          data = subprocess.check_output(["curl", "-fsSL", "-H", "Authorization: Bearer " + os.environ["GH_TOKEN"], url]).decode("utf-8", errors="replace")
+          lines = data.splitlines()
+          selected = set()
+          for i, line in enumerate(lines):
+              if re.search(r"error:|ARCHIVE FAILED|failed with|The following build commands failed", line):
+                  selected.update(range(max(0, i - 2), min(len(lines), i + 7)))
+          for i in sorted(selected):
+              print(lines[i])
+          print("Total log lines:", len(lines))
+          PY
