@@ -71,13 +71,7 @@ final class FocusSoundEffects {
 
     /// `nil` means sound effects are turned off.
     var selectedPackName: String? {
-        guard let stored = Settings.defalut.getExtraString(key: ExtraKey.landscapeSoundEffects.rawValue) else {
-            return Self.defaultPackName
-        }
-        if stored == Self.disabledStoredValue {
-            return nil
-        }
-        return stored
+        nil
     }
 
     var selectedPack: Pack? {

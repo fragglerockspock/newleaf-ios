@@ -60,13 +60,7 @@ final class BackgroundMusicKit {
 
     /// `nil` means BGM is turned off.
     var selectedTitle: String? {
-        guard let stored = Settings.defalut.getExtraString(key: ExtraKey.landscapeBackgroundMusic.rawValue) else {
-            return Self.defaultTrackTitle
-        }
-        if stored == Self.disabledStoredValue {
-            return nil
-        }
-        return stored
+        nil
     }
 
     var selectedTrack: Track? {

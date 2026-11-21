@@ -55,8 +55,11 @@ precondition(GameMetadataKit.searchGameInfo(displayName: "%").isEmpty)
 print("New Leaf and Welcome amiibo catalog checks passed")
 '''
 assert not (root / 'System.core/Extras.db').exists()
+assert not (root / 'System.core/MAME.db').exists()
+assert not (root / 'System.core/sounds').exists()
 for path in (root / 'ManicEmu/ManicEmu/Sources').rglob('*.swift'):
     assert 'R.Path.ExtrasDB' not in path.read_text(), path
+    assert 'R.Path.MAMEDB' not in path.read_text(), path
 with tempfile.TemporaryDirectory() as directory:
     path = Path(directory) / 'main.swift'
     path.write_text(harness + detection + catalog + checks)
