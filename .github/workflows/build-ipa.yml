@@ -1,4 +1,4 @@
-name: Build New Leaf metadata cleanup
+name: Build New Leaf Cleanup1
 
 on:
   workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-launcher-v5
+          key: manic-sideload-acnl-launcher-v6
 
       - name: Install C++ compiler cache
         run: brew install ccache glslang spirv-cross
@@ -167,7 +167,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/BaseManicApp
-          key: manic-sideload-acnl-launcher-v5
+          key: manic-sideload-acnl-launcher-v6
 
       - name: Save Azahar compiler cache
         uses: actions/cache/save@v4
@@ -221,12 +221,14 @@ jobs:
           python3 - "$APP_PATH/System.core" <<'PYVERIFY'
           import pathlib, sys, zipfile
           with zipfile.ZipFile(pathlib.Path(sys.argv[1])) as archive:
-              assert not any(name.rstrip("/").split("/")[-1] == "Extras.db" for name in archive.namelist())
+              forbidden = {"Extras.db", "Games.db", "MAME.db"}
+              assert not any(name.rstrip("/").split("/")[-1] in forbidden for name in archive.namelist())
+              assert not any(part in {"Nimbus220", "sounds", "PlayCase"} for name in archive.namelist() for part in name.split("/"))
               assert any(name.endswith("shared_font.bin") for name in archive.namelist())
           PYVERIFY
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112101' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112102' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
@@ -238,7 +240,7 @@ jobs:
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ManicEmu-ACNL-IPA
+          name: AnimalCrossing-NewLeaf-Cleanup1
           path: ManicEmu-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
