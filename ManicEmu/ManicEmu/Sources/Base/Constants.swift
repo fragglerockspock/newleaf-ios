@@ -472,7 +472,6 @@ extension _R {
                                         light: UIColor(hexString: "#FAFAFA")!,
                                         dark: UIColor(hexString: "#1B1B20")!)
         
-        static let BitBop = UIColor(hexString: "#7700FF")!
     }
     
     struct _Path {
@@ -1357,7 +1356,6 @@ extension _R {
         static let SymbianFlexSkinUrl = URL(fileURLWithPath: R.Path.Resource.appendingPathComponent("Symbian_Flex.manicskin"))
         static let SymbianEdgeSkinUrl = URL(fileURLWithPath: R.Path.Resource.appendingPathComponent("Symbian_Edge.manicskin"))
         static let SymbianEdgeFlexSkinUrl = URL(fileURLWithPath: R.Path.Resource.appendingPathComponent("Symbian_Edge_Flex.manicskin"))
-        static let BitBopStoreUrl = URL(string: "https://apps.apple.com/app/id6828015363")!
         
     }
     

@@ -791,18 +791,7 @@ extension GameType {
     }
     
     var supportBitBop: Bool {
-        if self == .ds ||
-            self == .md ||
-            self == .n64 ||
-            self == .nes ||
-            self == .snes ||
-            self == .gb ||
-            self == .gbc ||
-            self == .gba ||
-            self == .vb {
-            return true
-        }
-        return false
+        false
     }
     
     enum Display {

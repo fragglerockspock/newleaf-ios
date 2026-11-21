@@ -1124,7 +1124,7 @@ extension GameOption {
             SkinButtonBindingView.show(games: games)
             
         case .bitbop:
-            BitBopKit.sendToBitBop(games: games, in: scene)
+            break
         }
     }
     
