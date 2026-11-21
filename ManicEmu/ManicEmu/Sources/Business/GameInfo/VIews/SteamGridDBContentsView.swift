@@ -242,7 +242,7 @@ class SteamGridDBContentsView: BaseView {
         return ASListPage(
             navigation: .defaultNavigation(
                 title: sgdbGame.name,
-                titleIcon: .image(R.image.steamGridDB_icon())
+                titleIcon: .image(Optional(UIImage()))
             ),
             top: (topView, .fixedHeight(R.Size.ItemHeightExtraLarge), true),
             sections: contentSections(),

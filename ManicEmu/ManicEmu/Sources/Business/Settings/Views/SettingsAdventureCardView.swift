@@ -20,7 +20,7 @@ class SettingsAdventureCardView: BaseView {
     private let joinDateRow = AdventureInfoRowView()
     
     private lazy var avatarView: UIImageView = {
-        let view = UIImageView(image: R.image.avatar())
+        let view = UIImageView(image: Optional(UIImage()))
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         view.backgroundColor = R.Color.BackgroundPrimary
@@ -139,7 +139,7 @@ class SettingsAdventureCardView: BaseView {
         if let data = Settings.defalut.avatar?.storedData(), let image = UIImage(data: data) {
             avatarView.image = image
         } else {
-            avatarView.image = R.image.avatar()
+            avatarView.image = Optional(UIImage())
         }
     }
     

@@ -618,7 +618,7 @@ class ASSheetView: BaseView {
             make.edges.equalToSuperview()
         }
         
-        let iconView = ASIconView(.image(R.image.updation_ip()!))
+        let iconView = ASIconView(.image(UIImage()))
         if let superView = contentView.superview {
             superView.subviews.first(where: { $0.isKind(of: ASIconView.self) })?.removeFromSuperview()
             superView.addSubview(iconView)

@@ -14,7 +14,7 @@ class RetroAchievementsLaunchView: BaseView {
     }
     
     private let backgroundImageView: UIImageView = {
-        let view = UIImageView(image: R.image.retro_bg())
+        let view = UIImageView(image: Optional(UIImage()))
         view.contentMode = .scaleAspectFill
         return view
     }()

@@ -22,7 +22,7 @@ class RetroAchievementCountView: RoundAndBorderView {
         
         
         backgroundColor = .black.withAlphaComponent(0.1)
-        let icon = UIImageView(image: R.image.settings_retro())
+        let icon = UIImageView(image: Optional(UIImage()))
         icon.contentMode = .scaleAspectFill
         addSubview(icon)
         icon.snp.makeConstraints { make in

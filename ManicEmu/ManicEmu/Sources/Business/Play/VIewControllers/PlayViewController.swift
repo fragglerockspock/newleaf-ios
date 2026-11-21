@@ -3794,9 +3794,9 @@ extension PlayViewController {
             
             if !hideIcon {
                 let image: UIImage?
-                image = R.image.trophy_gold()
-                //                image = R.image.trophy_silver()
-                //                image = R.image.trophy_bronze()
+                image = Optional(UIImage())
+                //                image = Optional(UIImage())
+                //                image = Optional(UIImage())
                 let icon = UIImageView(image: image)
                 icon.contentMode = .scaleAspectFit
                 contentView.addSubview(icon)

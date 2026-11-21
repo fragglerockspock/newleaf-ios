@@ -75,7 +75,7 @@ class SkinCollectionViewCell: UICollectionViewCell {
     }()
     
     private var playcaseButton: UIImageView = {
-        let view = UIImageView(image: R.image.playcase_footnote())
+        let view = UIImageView(image: Optional(UIImage()))
         view.enablePressEffect = true
         view.isFocusable = false
         view.isHidden = true

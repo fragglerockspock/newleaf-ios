@@ -172,7 +172,7 @@ struct ImageFetcher {
                 return ASListPage.Cell.iconTitleChevronCell(icon: .image(R.image.libretro_icon()),
                                                             title: R.string.localizable.searchFromLibretro())
             case .steamGridDB:
-                return ASListPage.Cell.iconTitleChevronCell(icon: .image(R.image.steamGridDB_icon()),
+                return ASListPage.Cell.iconTitleChevronCell(icon: .image(Optional(UIImage())),
                                                             title: R.string.localizable.searchFromSteamGridDB())
             case .editImage, .editImageUrl:
                 return ASListPage.Cell.iconTitleChevronCell(icon: .symbolImage(R.image.edit_iconSymbols()),

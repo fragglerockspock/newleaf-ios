@@ -204,7 +204,7 @@ class RetroAchievementsDetailView: BaseView {
         }
         super.init(frame: .zero)
         
-        let retroImageView = UIImageView(image: R.image.retro_bg())
+        let retroImageView = UIImageView(image: Optional(UIImage()))
         retroImageView.contentMode = .scaleAspectFill
         addSubview(retroImageView)
         retroImageView.snp.makeConstraints { make in
@@ -291,7 +291,7 @@ class RetroAchievementsDetailView: BaseView {
             make.top.bottom.equalToSuperview()
         }
         
-        let retroImageView = UIImageView(image: R.image.retro_bg())
+        let retroImageView = UIImageView(image: Optional(UIImage()))
         retroImageView.contentMode = .scaleAspectFill
         shareImageView.addSubview(retroImageView)
         retroImageView.snp.makeConstraints { make in

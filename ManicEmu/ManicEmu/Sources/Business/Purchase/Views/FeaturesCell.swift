@@ -55,7 +55,7 @@ class FeaturesCell: UICollectionViewCell {
     }()
     
     private var serviceListView: UIImageView = {
-        let view = UIImageView(image: R.image.service_list_bg())
+        let view = UIImageView(image: Optional(UIImage()))
         view.isHidden = true
         return view
     }()

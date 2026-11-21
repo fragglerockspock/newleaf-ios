@@ -16,7 +16,7 @@ class PlayCasePromoView: BaseView {
         
         let containerView = UIView()
         let logoView = IconView()
-        logoView.image = R.image.playcase_logo()
+        logoView.image = Optional(UIImage())
         containerView.addSubview(logoView)
         logoView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

@@ -44,7 +44,7 @@ class RomPatcherView: BaseView {
     
     private lazy var navigationView: ASNavigationView = {
         var navigation = ASListPage.Navigation.defaultNavigation(title: "RomPatcher",
-                                                                 titleIcon: .image(R.image.rompatcher_logo()))
+                                                                 titleIcon: .image(Optional(UIImage())))
         let view = ASNavigationView(navigation)
         view.didTapClose = { [weak self] in
             guard let self = self else { return }

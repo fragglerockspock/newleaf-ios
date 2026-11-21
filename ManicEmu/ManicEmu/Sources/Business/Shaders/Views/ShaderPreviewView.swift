@@ -29,7 +29,7 @@ class ShaderPreviewView: RoundAndBorderView {
     }()
     
     private var dimensions = CGSize(width: 200, height: 150)
-    var image = R.image.shader_preview()! {
+    var image = UIImage() {
         didSet {
             updatePreview()
         }
@@ -88,6 +88,7 @@ class ShaderPreviewView: RoundAndBorderView {
         DispatchQueue.global().async { [weak self] in
             guard let self else { return }
             if let shader = self.shader,
+               self.image.cgImage != nil,
                !shader.isOriginal,
                let shaderImage = LibretroCore.previewImage(with: self.image, shaderPath: shader.filePath) {
                 DispatchQueue.main.async { [weak self] in

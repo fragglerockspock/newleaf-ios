@@ -172,7 +172,7 @@ class SteamGridDBSearchView: BaseView {
         return ASListPage(
             navigation: .defaultNavigation(
                 title: "SteamGridDB",
-                titleIcon: .image(R.image.steamGridDB_icon()),
+                titleIcon: .image(Optional(UIImage())),
                 tools: [.symbolImage(R.image.key_iconSymbols(), weight: .regular)]
             ),
             top: (topView, .fixedHeight(R.Size.ItemHeightExtraLarge), true),

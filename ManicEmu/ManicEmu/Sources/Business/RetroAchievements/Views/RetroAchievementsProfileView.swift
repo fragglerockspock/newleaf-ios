@@ -17,13 +17,13 @@ class RetroAchievementsProfileView: BaseView {
         
         class UnlockedView: BaseView {
             private let backgroundImageView: UIImageView = {
-                let view = UIImageView(image: R.image.retro_unlock_bg())
+                let view = UIImageView(image: Optional(UIImage()))
                 view.contentMode = .scaleToFill
                 return view
             }()
             
             private let trophyImageView: UIImageView = {
-                let view = UIImageView(image: R.image.retro_unlock_tryphy())
+                let view = UIImageView(image: Optional(UIImage()))
                 return view
             }()
             
