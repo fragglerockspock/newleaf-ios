@@ -26,6 +26,15 @@ jobs:
           lfs: true
           fetch-depth: 1
 
+      - name: Parse frontend Swift sources
+        run: |
+          python3 - <<'PYPARSE'
+          import pathlib, subprocess
+          sdk = subprocess.check_output(["xcrun", "--sdk", "iphoneos", "--show-sdk-path"], text=True).strip()
+          sources = sorted(str(path) for path in pathlib.Path("ManicEmu/ManicEmu/Sources").rglob("*.swift"))
+          subprocess.run(["xcrun", "swiftc", "-frontend", "-parse", "-target", "arm64-apple-ios15.0", "-sdk", sdk, "-DSIDE_LOAD", *sources], check=True)
+          PYPARSE
+
       - name: Apply New Leaf identity
         run: |
           set -euo pipefail
@@ -66,11 +75,18 @@ jobs:
       - name: Verify New Leaf metadata catalog
         run: python3 Scripts/TestNewLeafMetadata.py
 
-      - name: Show Xcode version and schemes
+      - name: Restore frontend build intermediates
+        if: steps.manic-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/DerivedData
+          key: manic-frontend-xcode27-v1-${{ github.run_id }}
+          restore-keys: manic-frontend-xcode27-v1-
+
+      - name: Show Xcode version
         if: steps.manic-cache.outputs.cache-hit != 'true'
         run: |
           xcodebuild -version
-          xcodebuild -list -project ManicEmu/ManicEmu.xcodeproj
 
       - name: Resolve packages and correct Device package platform
         if: steps.manic-cache.outputs.cache-hit != 'true'
@@ -145,6 +161,7 @@ jobs:
       - name: Archive sideload configuration
         if: steps.manic-cache.outputs.cache-hit != 'true'
         run: |
+          set +e
           xcodebuild archive \
             -project ManicEmu/ManicEmu.xcodeproj \
             -scheme ManicEmuSideload \
@@ -154,7 +171,37 @@ jobs:
             -archivePath "$RUNNER_TEMP/ManicEmu.xcarchive" \
             -derivedDataPath "$RUNNER_TEMP/DerivedData" \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO
+            CODE_SIGNING_REQUIRED=NO > "$RUNNER_TEMP/ManicArchive.log" 2>&1
+          LEAF_ARCHIVE_STATUS=$?
+          set -e
+          if [ "$LEAF_ARCHIVE_STATUS" -ne 0 ]; then
+            python3 - "$RUNNER_TEMP/ManicArchive.log" <<'PYERRORS'
+          import pathlib, re, sys
+          lines = pathlib.Path(sys.argv[1]).read_text(errors="replace").splitlines()
+          for line in lines:
+              if re.search(r"error:|ARCHIVE FAILED|The following build commands failed", line):
+                  print(line)
+          print("\n".join(lines[-15:]))
+          PYERRORS
+            exit "$LEAF_ARCHIVE_STATUS"
+          fi
+          tail -n 5 "$RUNNER_TEMP/ManicArchive.log"
+
+      - name: Upload frontend failure log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cleanup1-frontend-diagnostics
+          path: ${{ runner.temp }}/ManicArchive.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Save frontend build intermediates
+        if: always() && !cancelled() && steps.manic-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/DerivedData
+          key: manic-frontend-xcode27-v1-${{ github.run_id }}
 
       - name: Preserve unmodified Manic app
         if: steps.manic-cache.outputs.cache-hit != 'true'

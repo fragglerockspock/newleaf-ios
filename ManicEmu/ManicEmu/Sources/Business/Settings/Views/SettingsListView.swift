@@ -27,6 +27,182 @@ class SettingsListView: BaseView {
             case .others:
                 R.string.localizable.othersSettingTitle()
             case .moreFromManic:
+                R.string.localizable.moreFromManic()
+            }
+        }
+    }
+    
+    private var listPageView: ASListPageView? = nil
+    private let topView = SettingsTopView()
+    private let bottomView = SettingsBottomView()
+    
+    private var membershipNotification: Any? = nil
+    private var iCloudDriveSyncChangeNotification: Any? = nil
+    private var iCloudEnableChangeNotification: Any? = nil
+    
+    var didTapDetailView: ((UIView)->Void)? = nil
+    
+    private var settingsUpdateToken: NotificationToken? = nil
+    private lazy var items: [SectionIndex: [SettingItem]] = {
+        var datas = [SectionIndex: [SettingItem]]()
+        //Settings that update outside of the settings page will be monitored.
+        settingsUpdateToken = Settings.defalut.observe(keyPaths: [\Settings.airPlay]) { [weak self] change in
+            guard let self = self else { return }
+            switch change {
+            case .change(let object, let properties):
+                for property in properties {
+                    if let itemType = SettingItem.ItemType(rawValue: property.name) {
+                        self.reloadCell(for: .init(type: itemType))
+                    }
+                }
+            default:
+                break
+            }
+        }
+        
+        for section in SectionIndex.allCases {
+            if section == .top || section == .bottom || section == .moreFromManic {
+                datas[section] = []
+                
+            } else if section == .general {
+                datas[section] = [.init(type: .appearance),
+                                  .init(type: .theme),
+                                  .init(type: .quickGame),
+                                  .init(type: .autoSaveState),
+                                  .init(type: .skin),
+                                  .init(type: .coverScraping)]
+                
+            } else if section == .advance {
+#if SIDE_LOAD
+                datas[section] = [.init(type: .airPlay),
+                                  .init(type: .fullScreenWhenConnectController),
+                                  .init(type: .bios),
+                                  .init(type: .respectSilentMode),
+                                  .init(type: .onlinePlay),
+                                  .init(type: .rumble),
+                                  .init(type: .skinSound),
+                                  .init(type: .retro),
+                                  .init(type: .triggerPro),
+                                  .init(type: .jit),
+                                  .init(type: .shaders),
+                                  .init(type: .globalCoreSwitch),
+                ]
+#else
+                datas[section] = [.init(type: .airPlay),
+                                  .init(type: .iCloud),
+                                  .init(type: .fullScreenWhenConnectController),
+                                  .init(type: .bios),
+                                  .init(type: .respectSilentMode),
+                                  .init(type: .onlinePlay),
+                                  .init(type: .rumble),
+                                  .init(type: .skinSound),
+                                  .init(type: .retro),
+                                  .init(type: .triggerPro),
+                                  .init(type: .jit),
+                                  .init(type: .shaders),
+                                  .init(type: .globalCoreSwitch),
+                ]
+#endif
+            } else if section == .support {
+                datas[section] = [.init(type: .FAQ),
+                                  .init(type: .feedback),
+                                  .init(type: .qq),
+                                  .init(type: .discord)]
+                
+            } else if section == .others {
+                datas[section] = [.init(type: .about),
+                                  .init(type: .shareApp),
+                                  .init(type: .clearCache),
+                                  .init(type: .resetTips),
+                                  .init(type: .language),
+                                  .init(type: .userAgreement),
+                                  .init(type: .privacyPolicy),
+                                  .init(type: .featuredItems)]
+                
+            }
+        }
+        for section in datas.keys {
+            datas[section] = datas[section]?.filter { ![.globalCoreSwitch, .bios, .onlinePlay, .featuredItems, .quickGame, .coverScraping].contains($0.type) }
+        }
+        return datas
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        topView.membershipView.addTapGesture { [weak self] gesture in
+            self?.showMemberShip()
+        }
+        
+        let listView = ASListPageView(getListPage())
+        listView.didActionOccurred = { [weak self] action in
+            self?.handleAction(action)
+        }
+        addSubview(listView)
+        listView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        listPageView = listView
+        
+        membershipNotification = NotificationCenter.default.addObserver(forName: R.NotificationName.MembershipChange, object: nil, queue: .main) { [weak self] notification in
+            self?.reloadData()
+        }
+        
+        iCloudDriveSyncChangeNotification = NotificationCenter.default.addObserver(forName: R.NotificationName.iCloudDriveSyncChange, object: nil, queue: .main) { [weak self] _ in
+            self?.reloadCell(for: .init(type: .iCloud))
+        }
+        
+        iCloudEnableChangeNotification = NotificationCenter.default.addObserver(forName: R.NotificationName.iCloudEnableChange, object: nil, queue: .main) { [weak self] _ in
+            self?.reloadCell(for: .init(type: .iCloud))
+        }
+    }
+    
+    @MainActor required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        if let membershipNotification {
+            NotificationCenter.default.removeObserver(membershipNotification)
+        }
+        if let iCloudDriveSyncChangeNotification {
+            NotificationCenter.default.removeObserver(iCloudDriveSyncChangeNotification)
+        }
+        if let iCloudEnableChangeNotification {
+            NotificationCenter.default.removeObserver(iCloudEnableChangeNotification)
+        }
+    }
+    
+    private func getNavigation() -> ASListPage.Navigation? {
+        if (UIDevice.isPhone && !UIDevice.isPhoneDuoInnerFullScreen), preferredLayoutStyle == .landscape {
+            return nil
+        }
+        var navigationText = ASText.extraLargeText(R.string.localizable.tabbarTitleSettings())
+        navigationText.attributes?.alignment = .center
+        let navigation = ASListPage.Navigation(title: navigationText,
+                                               enableClose: false)
+        return navigation
+    }
+    
+    private func getListPage() -> ASListPage {
+        var sections = [ASListPage.Section]()
+        for sectionIndex in items.keys.sorted(by: { $0.rawValue < $1.rawValue } ) {
+            let settingItems = items[sectionIndex]!
+            switch sectionIndex {
+            case .top:
+                sections.append(ASListPage.Section(cells: [.custom(topView)],
+                                                   decoration: .init(enable: false),
+                                                   itemLayout: .fixedHeight(((UIDevice.isPhone && !UIDevice.isPhoneDuoInnerFullScreen) && preferredLayoutStyle == .landscape) ? 165 : 301)))
+                
+            case .general, .advance, .support, .others:
+                var header: ASListPage.Supplementary? = nil
+                if !sectionIndex.title.isEmpty {
+                    header = .defaultHeader(title: sectionIndex.title)
+                }
+                let section = ASListPage.Section(cells: settingItems.map({ $0.cellData }), header: header)
+                sections.append(section)
+                
+            case .moreFromManic:
                 break
 
             case .bottom:
