@@ -29,7 +29,6 @@ class PretendoNetworkingView: BaseView {
         view.backgroundColor = .clear
         view.contentInsetAdjustmentBehavior = .never
         view.register(cellWithClass: ArticBaseCollectionCell.self)
-        view.register(cellWithClass: NimbusCollectionCell.self)
         view.register(cellWithClass: PretendoHomeMenuCollectionCell.self)
         view.register(supplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withClass: BackgroundColorHaderReusableView.self)
         view.showsVerticalScrollIndicator = false
@@ -176,7 +175,7 @@ class PretendoNetworkingView: BaseView {
 
 extension PretendoNetworkingView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -196,17 +195,6 @@ extension PretendoNetworkingView: UICollectionViewDataSource {
                 guard let self else { return }
                 self.collectionView.endEditing(true)
                 self.pretendoConfig.articBaseRegion = region
-            }
-            return cell
-        } else if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withClass: NimbusCollectionCell.self, for: indexPath)
-            cell.setData(config: pretendoConfig)
-            cell.didTapButton = { [weak self] in
-                guard let self else { return }
-                self.collectionView.endEditing(true)
-                try? FileManager.safeMergeDirectories(srcURL: URL(fileURLWithPath: R.Path.Nimbus3DSPath), dstURL: URL(fileURLWithPath: R.Path.ThreeDS.appendingPathComponent("sdmc/3ds")))
-                LibretroCore.sharedInstance().installAzaharCIA(R.Path.NimbusCiaPath)
-                UIView.makeToast(message: R.string.localizable.installNimbusSuccess())
             }
             return cell
         } else {
@@ -249,8 +237,6 @@ extension PretendoNetworkingView: UICollectionViewDataSource {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withClass: BackgroundColorHaderReusableView.self, for: indexPath)
         if indexPath.section == 0 {
             header.titleLabel.text = R.string.localizable.articBaseSettings()
-        } else if indexPath.section == 1 {
-            header.titleLabel.text = R.string.localizable.pretendo()
         } else {
             header.titleLabel.text = R.string.localizable.consoleHomeTitle()
         }

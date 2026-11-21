@@ -556,7 +556,6 @@ extension _R {
         static let VICEx64sc = Document.appendingPathComponent(EmulationCore.VICEx64sc.name)
         static let PUAE = Document.appendingPathComponent(EmulationCore.PUAE.name)
         static let LibretroSavePath = Document
-        static let GamesDB = Resource.appendingPathComponent("Games.db")
         static let Assets = Document.appendingPathComponent("Assets")
         static let GameplayManuals = Document.appendingPathComponent("Manuals")
         static let NESPalettes = Resource.appendingPathComponent("NESPalettes")
@@ -580,9 +579,6 @@ extension _R {
         static let EKA2L1DriveENGage = EKA2L1DriveE.appendingPathComponent("n-gage")
         static let Dolphin = Document.appendingPathComponent(EmulationCore.Dolphin.name)
         static let DolphinGameSettings = Dolphin.appendingPathComponent("User/GameSettings")
-        static let NimbusPath = Resource.appendingPathComponent("Nimbus220")
-        static let Nimbus3DSPath = NimbusPath.appendingPathComponent("3ds")
-        static let NimbusCiaPath = NimbusPath.appendingPathComponent("cias/nimbus.cia")
         static let GamecubeUser = Dolphin.appendingPathComponent("/User/GC")
         static let GamecubeUserEUR = GamecubeUser.appendingPathComponent("/EUR")
         static let GamecubeUserJAP = GamecubeUser.appendingPathComponent("/JAP")

@@ -362,7 +362,6 @@
 		00000000000051A10000016F /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F632FD2D71822A007270E8 /* SettingsListView.swift */; };
 		00000000000051A100000170 /* TitleSortCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E4BA32F8A9B140027E6D0 /* TitleSortCollectionCell.swift */; };
 		00000000000051A100000171 /* ASIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796DB002FE416200051F661 /* ASIcon.swift */; };
-		00000000000051A100000172 /* NimbusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */; };
 		00000000000051A100000173 /* Prefference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F1D49A2FF52FCE00FC5B2A /* Prefference.swift */; };
 		00000000000051A100000174 /* DownloadManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC357F2DC0683700DF7418 /* DownloadManageView.swift */; };
 		00000000000051A100000175 /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57913AF42D5D89CC004D51AA /* TouchController.swift */; };
@@ -605,7 +604,6 @@
 		572D026B2F87E3F8000BD6F4 /* PretendoNetworkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02682F87E3F1000BD6F4 /* PretendoNetworkingView.swift */; };
 		572D02722F87E45B000BD6F4 /* PretendoNetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02702F87E453000BD6F4 /* PretendoNetworkingConfig.swift */; };
 		572D027A2F87EC49000BD6F4 /* ArticBaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02782F87EC3A000BD6F4 /* ArticBaseCollectionCell.swift */; };
-		572D02802F87EC63000BD6F4 /* NimbusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */; };
 		572D02862F87EC79000BD6F4 /* PretendoHomeMenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02832F87EC6B000BD6F4 /* PretendoHomeMenuCollectionCell.swift */; };
 		572D02DD2F89483E000BD6F4 /* OptionsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02DB2F894812000BD6F4 /* OptionsSheetView.swift */; };
 		57399AC52E40ACE100AB73DD /* PSXSBIImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57399AC42E40ACCF00AB73DD /* PSXSBIImportView.swift */; };
@@ -1112,7 +1110,6 @@
 		579094D1303C7D9100A53656 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F632FD2D71822A007270E8 /* SettingsListView.swift */; };
 		579094D2303C7D9100A53656 /* TitleSortCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E4BA32F8A9B140027E6D0 /* TitleSortCollectionCell.swift */; };
 		579094D3303C7D9100A53656 /* ASIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796DB002FE416200051F661 /* ASIcon.swift */; };
-		579094D4303C7D9100A53656 /* NimbusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */; };
 		579094D5303C7D9100A53656 /* Prefference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F1D49A2FF52FCE00FC5B2A /* Prefference.swift */; };
 		579094D6303C7D9100A53656 /* DownloadManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC357F2DC0683700DF7418 /* DownloadManageView.swift */; };
 		579094D7303C7D9100A53656 /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57913AF42D5D89CC004D51AA /* TouchController.swift */; };
@@ -1684,7 +1681,6 @@
 		57CDCEB82FD5CBD3005BA4C8 /* PretendoNetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D02702F87E453000BD6F4 /* PretendoNetworkingConfig.swift */; };
 		57CDCEB92FD5CBD3005BA4C8 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F632FD2D71822A007270E8 /* SettingsListView.swift */; };
 		57CDCEBA2FD5CBD3005BA4C8 /* TitleSortCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E4BA32F8A9B140027E6D0 /* TitleSortCollectionCell.swift */; };
-		57CDCEBC2FD5CBD3005BA4C8 /* NimbusCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */; };
 		57CDCEBD2FD5CBD3005BA4C8 /* DownloadManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC357F2DC0683700DF7418 /* DownloadManageView.swift */; };
 		57CDCEBE2FD5CBD3005BA4C8 /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57913AF42D5D89CC004D51AA /* TouchController.swift */; };
 		57CDCEBF2FD5CBD3005BA4C8 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC33BD2DBCDF2C00DF7418 /* CGRectExtensions.swift */; };
@@ -2315,7 +2311,6 @@
 		572D02682F87E3F1000BD6F4 /* PretendoNetworkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendoNetworkingView.swift; sourceTree = "<group>"; };
 		572D02702F87E453000BD6F4 /* PretendoNetworkingConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendoNetworkingConfig.swift; sourceTree = "<group>"; };
 		572D02782F87EC3A000BD6F4 /* ArticBaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticBaseCollectionCell.swift; sourceTree = "<group>"; };
-		572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCollectionCell.swift; sourceTree = "<group>"; };
 		572D02832F87EC6B000BD6F4 /* PretendoHomeMenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendoHomeMenuCollectionCell.swift; sourceTree = "<group>"; };
 		572D02DB2F894812000BD6F4 /* OptionsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSheetView.swift; sourceTree = "<group>"; };
 		57399AC42E40ACCF00AB73DD /* PSXSBIImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSXSBIImportView.swift; sourceTree = "<group>"; };
@@ -7770,7 +7765,6 @@
 				578F28952F37856700D2D998 /* PSPNetworkingView.swift */,
 				572D02682F87E3F1000BD6F4 /* PretendoNetworkingView.swift */,
 				572D02782F87EC3A000BD6F4 /* ArticBaseCollectionCell.swift */,
-				572D027B2F87EC4D000BD6F4 /* NimbusCollectionCell.swift */,
 				572D02832F87EC6B000BD6F4 /* PretendoHomeMenuCollectionCell.swift */,
 				57D9430B303029F300C06208 /* LibretroNetplayView.swift */,
 			);
@@ -14601,7 +14595,6 @@
 				00000000000051A10000016F /* SettingsListView.swift in Sources */,
 				00000000000051A100000170 /* TitleSortCollectionCell.swift in Sources */,
 				00000000000051A100000171 /* ASIcon.swift in Sources */,
-				00000000000051A100000172 /* NimbusCollectionCell.swift in Sources */,
 				00000000000051A100000173 /* Prefference.swift in Sources */,
 				00000000000051A100000174 /* DownloadManageView.swift in Sources */,
 				00000000000051A100000175 /* TouchController.swift in Sources */,
@@ -15046,7 +15039,6 @@
 				579094D1303C7D9100A53656 /* SettingsListView.swift in Sources */,
 				579094D2303C7D9100A53656 /* TitleSortCollectionCell.swift in Sources */,
 				579094D3303C7D9100A53656 /* ASIcon.swift in Sources */,
-				579094D4303C7D9100A53656 /* NimbusCollectionCell.swift in Sources */,
 				579094D5303C7D9100A53656 /* Prefference.swift in Sources */,
 				579094D6303C7D9100A53656 /* DownloadManageView.swift in Sources */,
 				579094D7303C7D9100A53656 /* TouchController.swift in Sources */,
@@ -15528,7 +15520,6 @@
 				57CDCEB92FD5CBD3005BA4C8 /* SettingsListView.swift in Sources */,
 				57CDCEBA2FD5CBD3005BA4C8 /* TitleSortCollectionCell.swift in Sources */,
 				5796DB022FE416230051F661 /* ASIcon.swift in Sources */,
-				57CDCEBC2FD5CBD3005BA4C8 /* NimbusCollectionCell.swift in Sources */,
 				57F1D49C2FF52FD000FC5B2A /* Prefference.swift in Sources */,
 				57CDCEBD2FD5CBD3005BA4C8 /* DownloadManageView.swift in Sources */,
 				57CDCEBE2FD5CBD3005BA4C8 /* TouchController.swift in Sources */,
@@ -15995,7 +15986,6 @@
 				57F632FE2D718236007270E8 /* SettingsListView.swift in Sources */,
 				578E4BA52F8A9B230027E6D0 /* TitleSortCollectionCell.swift in Sources */,
 				5796DB012FE416230051F661 /* ASIcon.swift in Sources */,
-				572D02802F87EC63000BD6F4 /* NimbusCollectionCell.swift in Sources */,
 				57F1D49B2FF52FD000FC5B2A /* Prefference.swift in Sources */,
 				57CC35802DC0684500DF7418 /* DownloadManageView.swift in Sources */,
 				57913AF52D5D89CF004D51AA /* TouchController.swift in Sources */,

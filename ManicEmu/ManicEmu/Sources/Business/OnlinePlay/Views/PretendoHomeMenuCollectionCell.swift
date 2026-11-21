@@ -11,7 +11,7 @@ class PretendoHomeMenuCollectionCell: UICollectionViewCell {
     private lazy var descLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        let text = R.string.localizable.homeMenuDesc()
+        let text = "Open the emulated Nintendo 3DS HOME Menu."
         let matt = NSMutableAttributedString(string: text, attributes: [.font: R.Font.Footnote(), .foregroundColor: R.Color.LabelSecondary])
         let style = NSMutableParagraphStyle()
         style.lineSpacing = R.Size.ContentSpaceTiny
