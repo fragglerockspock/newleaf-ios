@@ -1,4 +1,4 @@
-name: Build New Leaf LeafUI3
+name: Build New Leaf Pocket1
 
 on:
   workflow_dispatch:
@@ -108,7 +108,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: 799b2d140bbe00ed710268a62ad4e199f2061232
+          ref: d05b64bf1cb8223fef1b7b53f6bb1eb4e4f0e3b1
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -155,7 +155,7 @@ jobs:
           cmake --build build/ios-arm64 --target citra_libretro --config Release --parallel 4
           ccache --show-stats
           strip -x build/ios-arm64/bin/Release/azahar_libretro.dylib
-          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AH REG ", b"Leaf native title window graft and animation wrapper active")), "Missing ToolRing presentation path"'
+          python3 -c 'from pathlib import Path; data=Path("build/ios-arm64/bin/Release/azahar_libretro.dylib").read_bytes(); assert all(s in data for s in (b"Leaf ToolRing software overlay active", b"Leaf ToolRing Vulkan overlay active", b"Leaf ToolRing icon archive loaded:", b"Leaf UI texture registry:", b"Leaf UI software composition active", b"Leaf UI Vulkan composition active", b"LeafKeyTexel", b"UI FIX 2AH REG ", b"Leaf native title window graft and animation wrapper active", b"Leaf compact pocket prototype 1 active: 8x2 guest layout")), "Missing ToolRing presentation path"'
           test -s build/ios-arm64/bin/Release/azahar_libretro.dylib
 
       - name: Archive sideload configuration
@@ -191,7 +191,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: LeafUI3-frontend-diagnostics
+          name: Pocket1-frontend-diagnostics
           path: ${{ runner.temp }}/ManicArchive.log
           if-no-files-found: ignore
           retention-days: 7
@@ -275,7 +275,7 @@ jobs:
           PYVERIFY
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112303' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112304' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
@@ -287,7 +287,7 @@ jobs:
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: AnimalCrossing-NewLeaf-LeafUI3
+          name: AnimalCrossing-NewLeaf-Pocket1
           path: ManicEmu-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
