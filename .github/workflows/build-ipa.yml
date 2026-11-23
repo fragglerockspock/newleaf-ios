@@ -1,4 +1,4 @@
-name: Build New Leaf LeafUI1
+name: Build New Leaf LeafUI2
 
 on:
   workflow_dispatch:
@@ -108,7 +108,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: fragglerockspock/azahar-acnl
-          ref: d349b70d3629254dc2b3ddf63150de6258f207f0
+          ref: 0034ed0de5536a49e46498af35a0973ca9c9d65c
           path: azahar-acnl
           submodules: recursive
           fetch-depth: 1
@@ -191,7 +191,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: LeafUI1-frontend-diagnostics
+          name: LeafUI2-frontend-diagnostics
           path: ${{ runner.temp }}/ManicArchive.log
           if-no-files-found: ignore
           retention-days: 7
@@ -275,7 +275,7 @@ jobs:
           PYVERIFY
           /usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Animal Crossing: New Leaf' "$APP_PATH/Info.plist"
           /usr/libexec/PlistBuddy -c 'Set :CFBundleName New Leaf' "$APP_PATH/Info.plist"
-          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112301' "$APP_PATH/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion 2026112302' "$APP_PATH/Info.plist"
           APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP_PATH/Info.plist")"
           strings "$APP_PATH/$APP_EXECUTABLE" | grep -F 'ACNL Dedicated Launcher 1'
           mkdir -p "$RUNNER_TEMP/ipa/Payload"
@@ -287,7 +287,7 @@ jobs:
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: AnimalCrossing-NewLeaf-LeafUI1
+          name: AnimalCrossing-NewLeaf-LeafUI2
           path: ManicEmu-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
